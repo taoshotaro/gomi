@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/taoshotaro/gomi/blob/main/data/_schema/separation.schema.json",
+  "title": "GarbageSeparationRules",
+  "description": "Separation rules for a city (ごみ分別ルール)",
+  "type": "object",
+  "required": ["city_id", "categories"],
+  "additionalProperties": false,
+  "properties": {
+    "city_id": {
+      "type": "string",
+      "pattern": "^[a-z-]+/[a-z-]+$"
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/category" }
+    }
+  },
+  "$defs": {
+    "category": {
+      "type": "object",
+      "required": ["category_id", "name_ja"],
+      "additionalProperties": false,
+      "properties": {
+        "category_id": {
+          "type": "string",
+          "pattern": "^[a-z-]+$"
+        },
+        "name_ja": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/item" }
+        },
+        "subcategories": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/subcategory" }
+        }
+      }
+    },
+    "subcategory": {
+      "type": "object",
+      "required": ["subcategory_id", "name_ja"],
+      "additionalProperties": false,
+      "properties": {
+        "subcategory_id": {
+          "type": "string",
+          "pattern": "^[a-z-]+$"
+        },
+        "name_ja": {
+          "type": "string"
+        },
+        "preparation_ja": {
+          "type": "string",
+          "description": "How to prepare items in this subcategory"
+        },
+        "items": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/item" }
+        }
+      }
+    },
+    "item": {
+      "type": "object",
+      "required": ["name_ja", "keywords"],
+      "additionalProperties": false,
+      "properties": {
+        "name_ja": {
+          "type": "string"
+        },
+        "notes_ja": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

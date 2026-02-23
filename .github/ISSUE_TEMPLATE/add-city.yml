@@ -1,0 +1,103 @@
+name: "🏙️ Add City Data / 市区町村の追加"
+description: "Request garbage collection data for a new city"
+title: "[City] "
+labels: ["ai-generate"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Add a new city / 新しい市区町村の追加
+
+        Fill in the details below. An AI will research the city's garbage rules and create a PR.
+        以下の情報を入力してください。AIが自動的にごみ収集ルールを調査してPRを作成します。
+
+  - type: input
+    id: city
+    attributes:
+      label: "市区町村名 / City Name"
+      description: "Japanese name of the city/ward/town (e.g., 品川区, 横浜市, 札幌市)"
+      placeholder: "品川区"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: prefecture
+    attributes:
+      label: "都道府県 / Prefecture"
+      options:
+        - 北海道
+        - 青森県
+        - 岩手県
+        - 宮城県
+        - 秋田県
+        - 山形県
+        - 福島県
+        - 茨城県
+        - 栃木県
+        - 群馬県
+        - 埼玉県
+        - 千葉県
+        - 東京都
+        - 神奈川県
+        - 新潟県
+        - 富山県
+        - 石川県
+        - 福井県
+        - 山梨県
+        - 長野県
+        - 岐阜県
+        - 静岡県
+        - 愛知県
+        - 三重県
+        - 滋賀県
+        - 京都府
+        - 大阪府
+        - 兵庫県
+        - 奈良県
+        - 和歌山県
+        - 鳥取県
+        - 島根県
+        - 岡山県
+        - 広島県
+        - 山口県
+        - 徳島県
+        - 香川県
+        - 愛媛県
+        - 高知県
+        - 福岡県
+        - 佐賀県
+        - 長崎県
+        - 熊本県
+        - 大分県
+        - 宮崎県
+        - 鹿児島県
+        - 沖縄県
+    validations:
+      required: true
+
+  - type: input
+    id: source_url
+    attributes:
+      label: "公式サイトURL / Source URL (optional)"
+      description: "URL of the city's official garbage collection page, if known"
+      placeholder: "https://www.city.example.lg.jp/gomi/"
+    validations:
+      required: false
+
+  - type: input
+    id: city_id
+    attributes:
+      label: "City ID (optional)"
+      description: "Romanized city name in kebab-case (e.g., shinagawa-ku). Leave blank for auto-detection."
+      placeholder: "shinagawa-ku"
+    validations:
+      required: false
+
+  - type: input
+    id: prefecture_id
+    attributes:
+      label: "Prefecture ID (optional)"
+      description: "Romanized prefecture name in kebab-case (e.g., tokyo). Leave blank for auto-detection."
+      placeholder: "tokyo"
+    validations:
+      required: false

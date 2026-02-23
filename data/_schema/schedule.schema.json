@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/taoshotaro/gomi/blob/main/data/_schema/schedule.schema.json",
+  "title": "GarbageCollectionSchedule",
+  "description": "Collection schedule for a city (ごみ収集スケジュール)",
+  "type": "object",
+  "required": ["city_id", "city_name_ja", "source_url", "areas"],
+  "additionalProperties": false,
+  "properties": {
+    "city_id": {
+      "type": "string",
+      "pattern": "^[a-z-]+/[a-z-]+$",
+      "description": "City identifier in {prefecture}/{city} format"
+    },
+    "city_name_ja": {
+      "type": "string",
+      "description": "City name in Japanese"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Official source URL"
+    },
+    "areas": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/area" }
+    }
+  },
+  "$defs": {
+    "area": {
+      "type": "object",
+      "required": ["area_id", "area_name_ja", "categories"],
+      "additionalProperties": false,
+      "properties": {
+        "area_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "area_name_ja": {
+          "type": "string"
+        },
+        "categories": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/scheduleCategory" }
+        }
+      }
+    },
+    "scheduleCategory": {
+      "type": "object",
+      "required": ["category_id", "name_ja", "collection_days"],
+      "additionalProperties": false,
+      "properties": {
+        "category_id": {
+          "type": "string",
+          "pattern": "^[a-z-]+$"
+        },
+        "name_ja": {
+          "type": "string"
+        },
+        "collection_days": {
+          "oneOf": [
+            { "$ref": "#/$defs/weeklySchedule" },
+            { "$ref": "#/$defs/monthlySchedule" },
+            { "$ref": "#/$defs/appointmentSchedule" }
+          ]
+        },
+        "collection_time": {
+          "type": "string",
+          "description": "e.g. 朝8時まで"
+        },
+        "bag_type": {
+          "type": "string",
+          "description": "Required bag type"
+        },
+        "notes_ja": {
+          "type": "string"
+        }
+      }
+    },
+    "weeklySchedule": {
+      "type": "object",
+      "required": ["type", "days"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "weekly" },
+        "days": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+          }
+        }
+      }
+    },
+    "monthlySchedule": {
+      "type": "object",
+      "required": ["type", "pattern"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "monthly" },
+        "pattern": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["week", "day"],
+            "additionalProperties": false,
+            "properties": {
+              "week": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "day": {
+                "type": "string",
+                "enum": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+              }
+            }
+          }
+        }
+      }
+    },
+    "appointmentSchedule": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "const": "appointment" },
+        "contact_phone": { "type": "string" },
+        "contact_url": { "type": "string", "format": "uri" },
+        "notes_ja": { "type": "string" }
+      }
+    }
+  }
+}
