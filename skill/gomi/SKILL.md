@@ -31,7 +31,17 @@ bash gomi.sh search 品川
 
 1. If the user hasn't mentioned a city, ask which city they're in.
 2. Run `bash gomi.sh cities` to get the list. Match by `name_ja`.
-3. If the city isn't available, tell the user and suggest they open an issue at https://github.com/taoshotaro/gomi/issues
+3. If the city isn't available, tell the user and provide a pre-filled issue URL so they can request it:
+
+   ```
+   https://github.com/taoshotaro/gomi/issues/new?template=add-city.yml&title=[City]+{CITY_NAME_JA}&city={CITY_NAME_JA}&prefecture={PREFECTURE_JA}
+   ```
+
+   Replace `{CITY_NAME_JA}` and `{PREFECTURE_JA}` with URL-encoded Japanese names.
+   Example for 横浜市 (神奈川県):
+   `https://github.com/taoshotaro/gomi/issues/new?template=add-city.yml&title=[City]+横浜市&city=横浜市&prefecture=神奈川県`
+
+   Tell the user: clicking the link will create a request, and AI will automatically research the city's rules and create a PR.
 
 ### Step 2: Route the query
 
