@@ -8,11 +8,11 @@ Index of all available cities.
 {
   version: string;          // "1.0.0"
   cities: Array<{
-    id: string;             // "{prefecture}/{city}" e.g. "tokyo/shinagawa-ku"
+    id: string;             // "{prefecture}/{city}" e.g. "tokyo/shinagawa"
     name_ja: string;        // Japanese name e.g. "品川区"
     prefecture_ja: string;  // Prefecture e.g. "東京都"
     source_url: string;     // Official source URL
-    data_path: string;      // Relative path under data/ e.g. "jp/tokyo/shinagawa-ku"
+    data_path: string;      // Relative path under data/ e.g. "jp/tokyo/shinagawa"
     last_verified: string;  // ISO date e.g. "2026-02-23"
   }>;
 }

@@ -27,14 +27,14 @@ case "${1:-}" in
     ;;
   schedule)
     if [ -z "${2:-}" ]; then
-      echo "Usage: gomi.sh schedule <city_id>  (e.g. tokyo/shinagawa-ku)" >&2
+      echo "Usage: gomi.sh schedule <city_id>  (e.g. tokyo/shinagawa)" >&2
       exit 1
     fi
     fetch "$BASE_URL/jp/$2/schedule.json"
     ;;
   separation)
     if [ -z "${2:-}" ]; then
-      echo "Usage: gomi.sh separation <city_id>  (e.g. tokyo/shinagawa-ku)" >&2
+      echo "Usage: gomi.sh separation <city_id>  (e.g. tokyo/shinagawa)" >&2
       exit 1
     fi
     fetch "$BASE_URL/jp/$2/separation.json"
@@ -52,7 +52,7 @@ case "${1:-}" in
     echo ""
     echo "Commands:"
     echo "  cities                  List available cities"
-    echo "  schedule <city_id>      Get collection schedule (e.g. tokyo/shinagawa-ku)"
+    echo "  schedule <city_id>      Get collection schedule (e.g. tokyo/shinagawa)"
     echo "  separation <city_id>    Get separation rules"
     echo "  search <query>          Search cities by name"
     ;;

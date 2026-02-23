@@ -41,10 +41,29 @@ Return a single JSON object:
   "schedule_urls": ["<URLs to official schedule pages>"],
   "separation_urls": ["<URLs to separation rules pages>"],
   "official_url": "<main garbage info page>",
-  "city_id": "{{CITY_ID}}",
-  "prefecture_id": "{{PREFECTURE_ID}}"
+  "city_id": "<romanized kebab-case name WITHOUT administrative suffix>",
+  "prefecture_id": "<romanized kebab-case name WITHOUT administrative suffix>"
 }
 ```
+
+### ID generation rules
+
+Generate `city_id` and `prefecture_id` as romanized kebab-case identifiers for the city and prefecture.
+
+**Do NOT include administrative suffixes in IDs.** Strip these suffixes:
+- Prefecture: -to (都), -do (道), -fu (府), -ken (県)
+- City/Ward/Town: -ku (区), -shi (市), -cho/machi (町), -son/mura (村), -gun (郡)
+
+**Examples:**
+| Japanese | Correct ID | Wrong ID |
+|----------|-----------|----------|
+| 品川区 | shinagawa | shinagawa-ku |
+| 横浜市 | yokohama | yokohama-shi |
+| 東京都 | tokyo | tokyo-to |
+| 北海道 | hokkaido | hokkaido-do |
+| 大阪府 | osaka | osaka-fu |
+| 神奈川県 | kanagawa | kanagawa-ken |
+| 箱根町 | hakone | hakone-machi |
 
 ## Rules
 

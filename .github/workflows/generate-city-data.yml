@@ -14,12 +14,6 @@ on:
       source_url:
         description: "Official garbage page URL (optional)"
         required: false
-      city_id:
-        description: "City ID in kebab-case (e.g., shinagawa-ku)"
-        required: false
-      prefecture_id:
-        description: "Prefecture ID in kebab-case (e.g., tokyo)"
-        required: false
 
 permissions:
   contents: write
@@ -59,14 +53,10 @@ jobs:
             echo "city=${{ steps.parse.outputs.city }}" >> $GITHUB_OUTPUT
             echo "prefecture=${{ steps.parse.outputs.prefecture }}" >> $GITHUB_OUTPUT
             echo "source_url=${{ steps.parse.outputs.source_url }}" >> $GITHUB_OUTPUT
-            echo "city_id=" >> $GITHUB_OUTPUT
-            echo "prefecture_id=" >> $GITHUB_OUTPUT
           else
             echo "city=${{ inputs.city }}" >> $GITHUB_OUTPUT
             echo "prefecture=${{ inputs.prefecture }}" >> $GITHUB_OUTPUT
             echo "source_url=${{ inputs.source_url }}" >> $GITHUB_OUTPUT
-            echo "city_id=${{ inputs.city_id }}" >> $GITHUB_OUTPUT
-            echo "prefecture_id=${{ inputs.prefecture_id }}" >> $GITHUB_OUTPUT
           fi
 
       - name: Generate data with LLM
@@ -78,12 +68,6 @@ jobs:
           ARGS="--city '${{ steps.inputs.outputs.city }}' --prefecture '${{ steps.inputs.outputs.prefecture }}'"
           if [ -n "${{ steps.inputs.outputs.source_url }}" ]; then
             ARGS="$ARGS --url '${{ steps.inputs.outputs.source_url }}'"
-          fi
-          if [ -n "${{ steps.inputs.outputs.city_id }}" ]; then
-            ARGS="$ARGS --city-id '${{ steps.inputs.outputs.city_id }}'"
-          fi
-          if [ -n "${{ steps.inputs.outputs.prefecture_id }}" ]; then
-            ARGS="$ARGS --prefecture-id '${{ steps.inputs.outputs.prefecture_id }}'"
           fi
           eval "bun run .github/scripts/generate.ts $ARGS"
 

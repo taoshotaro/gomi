@@ -84,20 +84,3 @@ body:
     validations:
       required: false
 
-  - type: input
-    id: city_id
-    attributes:
-      label: "City ID (optional)"
-      description: "Romanized city name in kebab-case (e.g., shinagawa-ku). Leave blank for auto-detection."
-      placeholder: "shinagawa-ku"
-    validations:
-      required: false
-
-  - type: input
-    id: prefecture_id
-    attributes:
-      label: "Prefecture ID (optional)"
-      description: "Romanized prefecture name in kebab-case (e.g., tokyo). Leave blank for auto-detection."
-      placeholder: "tokyo"
-    validations:
-      required: false

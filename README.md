@@ -14,7 +14,7 @@ Each municipality in Japan has different garbage collection days, categories, an
 
 | City | Prefecture | Data |
 |------|-----------|------|
-| 品川区 | 東京都 | [schedule](data/jp/tokyo/shinagawa-ku/schedule.json) / [separation](data/jp/tokyo/shinagawa-ku/separation.json) |
+| 品川区 | 東京都 | [schedule](data/jp/tokyo/shinagawa/schedule.json) / [separation](data/jp/tokyo/shinagawa/separation.json) |
 
 ## Adding a new city
 

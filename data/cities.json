@@ -2,11 +2,11 @@
   "version": "1.0.0",
   "cities": [
     {
-      "id": "tokyo/shinagawa-ku",
+      "id": "tokyo/shinagawa",
       "name_ja": "品川区",
       "prefecture_ja": "東京都",
       "source_url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/",
-      "data_path": "jp/tokyo/shinagawa-ku",
+      "data_path": "jp/tokyo/shinagawa",
       "last_verified": "2026-02-23"
     }
   ]

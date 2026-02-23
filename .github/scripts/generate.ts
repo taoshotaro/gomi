@@ -14,9 +14,13 @@
  *   ANTHROPIC_API_KEY    — API key (required)
  *
  * Usage: bun run .github/scripts/generate.ts --city <name_ja> --prefecture <prefecture_ja> [--url <source_url>]
+ *
+ * City and prefecture IDs are auto-detected by the LLM in the discover step.
  */
 
 import Anthropic from "@anthropic-ai/sdk";
+import Ajv from "ajv";
+import addFormats from "ajv-formats";
 import {
   readFileSync,
   writeFileSync,
@@ -35,12 +39,13 @@ const MODEL = process.env.MODEL || "claude-sonnet-4-20250514";
 
 // ─── CLI ────────────────────────────────────────────────────────────────────
 
+const MAX_FIX_RETRIES_DEFAULT = 3;
+
 interface GenerateArgs {
   city: string;
   prefecture: string;
   url?: string;
-  cityId?: string;
-  prefectureId?: string;
+  maxFixRetries: number;
 }
 
 function parseCliArgs(): GenerateArgs {
@@ -50,14 +55,13 @@ function parseCliArgs(): GenerateArgs {
       city: { type: "string" },
       prefecture: { type: "string" },
       url: { type: "string" },
-      "city-id": { type: "string" },
-      "prefecture-id": { type: "string" },
+      "max-fix-retries": { type: "string" },
     },
   });
 
   if (!values.city || !values.prefecture) {
     console.error(
-      "Usage: bun run generate.ts --city <name_ja> --prefecture <prefecture_ja> [--url <url>] [--city-id <id>] [--prefecture-id <id>]"
+      "Usage: bun run generate.ts --city <name_ja> --prefecture <prefecture_ja> [--url <url>] [--max-fix-retries <n>]"
     );
     process.exit(1);
   }
@@ -66,16 +70,10 @@ function parseCliArgs(): GenerateArgs {
     city: values.city,
     prefecture: values.prefecture,
     url: values.url,
-    cityId: values["city-id"],
-    prefectureId: values["prefecture-id"],
+    maxFixRetries: values["max-fix-retries"]
+      ? parseInt(values["max-fix-retries"], 10)
+      : MAX_FIX_RETRIES_DEFAULT,
   };
-}
-
-function toKebab(ja: string): string {
-  return ja
-    .replace(/[都道府県市区町村郡]$/g, "")
-    .replace(/\s+/g, "-")
-    .toLowerCase();
 }
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
@@ -407,15 +405,10 @@ async function discover(
 ): Promise<DiscoverResult> {
   console.log("Step 1: Discovering data sources...");
 
-  const prefectureId = args.prefectureId || toKebab(args.prefecture);
-  const cityId = args.cityId || toKebab(args.city);
-
   let prompt = loadPrompt("discover");
   prompt = prompt
     .replace(/\{\{CITY_NAME_JA\}\}/g, args.city)
     .replace(/\{\{PREFECTURE_JA\}\}/g, args.prefecture)
-    .replace(/\{\{PREFECTURE_ID\}\}/g, prefectureId)
-    .replace(/\{\{CITY_ID\}\}/g, cityId)
     .replace(
       /\{\{#if SOURCE_URL\}\}([\s\S]*?)\{\{\/if\}\}/g,
       args.url ? `Start with this official URL: ${args.url}` : ""
@@ -428,15 +421,23 @@ async function discover(
 
   const result = extractJson(text) as Record<string, unknown>;
 
+  const cityId = result.city_id as string;
+  const prefectureId = result.prefecture_id as string;
+
+  if (!cityId || !prefectureId) {
+    throw new Error("LLM did not return city_id or prefecture_id");
+  }
+
   const discovered: DiscoverResult = {
     csvUrl: (result.csv_url as string) || null,
     scheduleUrls: (result.schedule_urls as string[]) || [],
     separationUrls: (result.separation_urls as string[]) || [],
     officialUrl: (result.official_url as string) || args.url || "",
-    cityId: (result.city_id as string) || cityId,
-    prefectureId: (result.prefecture_id as string) || prefectureId,
+    cityId,
+    prefectureId,
   };
 
+  console.log(`  City ID: ${discovered.prefectureId}/${discovered.cityId}`);
   console.log(`  CSV URL: ${discovered.csvUrl || "(none)"}`);
   console.log(`  Schedule pages: ${discovered.scheduleUrls.length}`);
   console.log(`  Separation pages: ${discovered.separationUrls.length}`);
@@ -739,24 +740,112 @@ Requirements:
   console.log("  Separation rules extracted.");
 }
 
-// ─── Step 5: VALIDATE & UPDATE ──────────────────────────────────────────────
+// ─── Step 5: VALIDATE, AUTO-FIX & UPDATE ────────────────────────────────────
 
-function validateAndUpdate(
+interface ValidationError {
+  file: string;
+  errors: string[];
+}
+
+function validateData(outDir: string): ValidationError[] {
+  const ajv = new Ajv({ allErrors: true });
+  addFormats(ajv);
+
+  const scheduleSchema = JSON.parse(
+    readFileSync(join(ROOT, "data/_schema/schedule.schema.json"), "utf-8")
+  );
+  const separationSchema = JSON.parse(
+    readFileSync(join(ROOT, "data/_schema/separation.schema.json"), "utf-8")
+  );
+
+  const results: ValidationError[] = [];
+
+  const checks: Array<{ file: string; schema: object }> = [
+    { file: "schedule.json", schema: scheduleSchema },
+    { file: "separation.json", schema: separationSchema },
+  ];
+
+  for (const { file, schema } of checks) {
+    const filePath = join(outDir, file);
+    if (!existsSync(filePath)) {
+      results.push({ file, errors: [`${file} was not generated`] });
+      continue;
+    }
+    const data = JSON.parse(readFileSync(filePath, "utf-8"));
+    const validate = ajv.compile(schema);
+    if (!validate(data)) {
+      const errors = (validate.errors ?? []).map(
+        (e) => `${e.instancePath} ${e.message}`
+      );
+      results.push({ file, errors });
+    }
+  }
+
+  return results;
+}
+
+async function autoFixFile(
+  client: Anthropic,
+  outDir: string,
+  error: ValidationError
+): Promise<void> {
+  const filePath = join(outDir, error.file);
+  const data = readFileSync(filePath, "utf-8");
+
+  const schemaFile = error.file === "schedule.json"
+    ? "schedule.schema.json"
+    : "separation.schema.json";
+  const schema = readFileSync(
+    join(ROOT, "data/_schema", schemaFile),
+    "utf-8"
+  );
+
+  // Truncate data if very large to fit context
+  const truncatedData = data.length > 80000
+    ? data.slice(0, 80000) + "\n... (truncated)"
+    : data;
+
+  const prompt = `Fix the following JSON data so it passes schema validation.
+
+## Validation errors
+
+${error.errors.map((e) => `- ${e}`).join("\n")}
+
+## Schema
+
+\`\`\`json
+${schema}
+\`\`\`
+
+## Current data (${error.file})
+
+\`\`\`json
+${truncatedData}
+\`\`\`
+
+## Rules
+
+- Fix ONLY the validation errors — do not remove or change valid data
+- Preserve all existing areas/categories/items
+- Output the complete fixed JSON (not a diff)
+- Output ONLY the JSON — no explanation`;
+
+  const text = await callLlm(client, prompt, {
+    maxTokens: 16000,
+    thinkingBudget: 8000,
+  });
+
+  const fixed = extractJson(text);
+  writeFileSync(filePath, JSON.stringify(fixed, null, 2) + "\n");
+}
+
+function updateCitiesJson(
   sources: DiscoverResult,
   args: GenerateArgs,
   outDir: string
 ): void {
-  console.log("Step 5: Validating and updating cities.json...");
-
   const schedulePath = join(outDir, "schedule.json");
   const separationPath = join(outDir, "separation.json");
-
-  if (!existsSync(schedulePath)) {
-    throw new Error("schedule.json was not generated");
-  }
-  if (!existsSync(separationPath)) {
-    throw new Error("separation.json was not generated");
-  }
 
   const schedule = JSON.parse(readFileSync(schedulePath, "utf-8"));
   const areas = (schedule as { areas?: unknown[] }).areas;
@@ -815,8 +904,43 @@ async function main() {
 
   await generateSchedule(client, sources, args, TMP_DIR, outDir);
   await generateSeparation(client, sources, args, TMP_DIR, outDir);
-  validateAndUpdate(sources, args, outDir);
 
+  // Validate with auto-fix retry loop
+  console.log("Step 5: Validating generated data...");
+  for (let attempt = 0; attempt <= args.maxFixRetries; attempt++) {
+    const errors = validateData(outDir);
+
+    if (errors.length === 0) {
+      if (attempt > 0) {
+        console.log(`  Validation passed after ${attempt} auto-fix attempt(s).`);
+      } else {
+        console.log("  Validation passed.");
+      }
+      break;
+    }
+
+    if (attempt === args.maxFixRetries) {
+      for (const err of errors) {
+        console.error(`  FAIL ${err.file}:`);
+        for (const msg of err.errors) {
+          console.error(`    ${msg}`);
+        }
+      }
+      throw new Error(
+        `Validation failed after ${args.maxFixRetries} auto-fix attempt(s)`
+      );
+    }
+
+    console.log(
+      `  Validation errors found — auto-fix attempt ${attempt + 1}/${args.maxFixRetries}...`
+    );
+    for (const err of errors) {
+      console.log(`    Fixing ${err.file} (${err.errors.length} error(s))...`);
+      await autoFixFile(client, outDir, err);
+    }
+  }
+
+  updateCitiesJson(sources, args, outDir);
   console.log("\nDone!");
 }
 

@@ -16,10 +16,10 @@ Data is hosted at `taoshotaro/gomi` on GitHub. Use the script `gomi.sh` to fetch
 bash gomi.sh cities
 
 # Get schedule for a city
-bash gomi.sh schedule tokyo/shinagawa-ku
+bash gomi.sh schedule tokyo/shinagawa
 
 # Get separation rules for a city
-bash gomi.sh separation tokyo/shinagawa-ku
+bash gomi.sh separation tokyo/shinagawa
 
 # Search cities by Japanese name
 bash gomi.sh search 品川
