@@ -1,0 +1,14 @@
+{
+  "csvUrl": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-shushu/hpg000032873.html",
+  "scheduleUrls": [
+    "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-shushu/hpg000032873.html"
+  ],
+  "separationUrls": [
+    "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-bunbetsu/index.html",
+    "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-bunbetsu/hpg000032874.html",
+    "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-bunbetsu/hpg000032875.html"
+  ],
+  "officialUrl": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/",
+  "cityId": "shinagawa",
+  "prefectureId": "tokyo"
+}

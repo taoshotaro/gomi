@@ -16,8 +16,7 @@
               "tuesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -34,8 +33,7 @@
                 "day": "monday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -45,807 +43,7 @@
             "days": [
               "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "上大崎1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "saturday"
-              },
-              {
-                "week": 3,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "西五反田1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "saturday"
-              },
-              {
-                "week": 4,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "東五反田1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "saturday"
-              },
-              {
-                "week": 3,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "広町1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "thursday"
-              },
-              {
-                "week": 3,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "八潮1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "tuesday"
-              },
-              {
-                "week": 3,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "荏原1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "saturday"
-              },
-              {
-                "week": 3,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "小山1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "saturday"
-              },
-              {
-                "week": 3,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "小山台1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "saturday"
-              },
-              {
-                "week": 3,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "戸越1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "tuesday"
-              },
-              {
-                "week": 4,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "中延1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "thursday"
-              },
-              {
-                "week": 3,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "西中延1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "thursday"
-              },
-              {
-                "week": 3,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "旗の台1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "friday"
-              },
-              {
-                "week": 4,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "東中延1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "thursday"
-              },
-              {
-                "week": 4,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "平塚1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "thursday"
-              },
-              {
-                "week": 4,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "二葉1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "tuesday"
-              },
-              {
-                "week": 3,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "1-chome",
-      "area_name_ja": "豊町1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "tuesday"
-              },
-              {
-                "week": 3,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "大崎2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "saturday"
-              },
-              {
-                "week": 4,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
@@ -862,8 +60,7 @@
               "tuesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -880,8 +77,7 @@
                 "day": "wednesday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -891,718 +87,12 @@
             "days": [
               "tuesday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "2-chome",
-      "area_name_ja": "上大崎2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "wednesday"
-              },
-              {
-                "week": 3,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "西五反田2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "saturday"
-              },
-              {
-                "week": 3,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "東五反田2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "saturday"
-              },
-              {
-                "week": 3,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "広町2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "thursday"
-              },
-              {
-                "week": 3,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "八潮2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "friday"
-              },
-              {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "荏原2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "saturday"
-              },
-              {
-                "week": 4,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "小山2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "saturday"
-              },
-              {
-                "week": 3,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "小山台2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "saturday"
-              },
-              {
-                "week": 3,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "戸越2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "tuesday"
-              },
-              {
-                "week": 4,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "中延2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "thursday"
-              },
-              {
-                "week": 3,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "西中延2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "thursday"
-              },
-              {
-                "week": 3,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "旗の台2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "wednesday"
-              },
-              {
-                "week": 3,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "東中延2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "wednesday"
-              },
-              {
-                "week": 3,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "二葉2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "monday"
-              },
-              {
-                "week": 3,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome",
-      "area_name_ja": "豊町2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "tuesday"
-              },
-              {
-                "week": 3,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome44",
+      "area_id": "2-chome4-4",
       "area_name_ja": "平塚2丁目4番4号",
       "categories": [
         {
@@ -1614,8 +104,7 @@
               "monday",
               "thursday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -1632,8 +121,7 @@
                 "day": "thursday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -1643,102 +131,7 @@
             "days": [
               "monday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "2-chome44",
-      "area_name_ja": "平塚2丁目4番4号以外",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "thursday"
-              },
-              {
-                "week": 4,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "大崎3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "saturday"
-              },
-              {
-                "week": 4,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
@@ -1755,8 +148,7 @@
               "tuesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -1773,8 +165,7 @@
                 "day": "monday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -1784,343 +175,13 @@
             "days": [
               "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "3-chome",
-      "area_name_ja": "上大崎3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "wednesday"
-              },
-              {
-                "week": 3,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "西五反田3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "wednesday"
-              },
-              {
-                "week": 3,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "東五反田3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "saturday"
-              },
-              {
-                "week": 3,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "八潮3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "friday"
-              },
-              {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "荏原3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "saturday"
-              },
-              {
-                "week": 4,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "小山3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "saturday"
-              },
-              {
-                "week": 4,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "戸越3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "tuesday"
-              },
-              {
-                "week": 4,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "中延3丁目",
+      "area_id": "4-chome",
+      "area_name_ja": "西大井4丁目",
       "categories": [
         {
           "category_id": "burnable",
@@ -2131,8 +192,7 @@
               "tuesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -2142,532 +202,14 @@
             "pattern": [
               {
                 "week": 1,
-                "day": "wednesday"
-              },
-              {
-                "week": 3,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "西中延3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "wednesday"
-              },
-              {
-                "week": 3,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "旗の台3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "wednesday"
-              },
-              {
-                "week": 3,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "平塚3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
                 "day": "thursday"
               },
               {
-                "week": 4,
+                "week": 3,
                 "day": "thursday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "二葉3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "monday"
-              },
-              {
-                "week": 3,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "3-chome",
-      "area_name_ja": "豊町3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "monday"
-              },
-              {
-                "week": 3,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "4-chome",
-      "area_name_ja": "大崎4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "saturday"
-              },
-              {
-                "week": 4,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "4-chome",
-      "area_name_ja": "上大崎4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "wednesday"
-              },
-              {
-                "week": 3,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "4-chome",
-      "area_name_ja": "西五反田4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "wednesday"
-              },
-              {
-                "week": 4,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "4-chome",
-      "area_name_ja": "東五反田4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "saturday"
-              },
-              {
-                "week": 3,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "4-chome",
-      "area_name_ja": "八潮4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "friday"
-              },
-              {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "4-chome",
-      "area_name_ja": "荏原4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "saturday"
-              },
-              {
-                "week": 4,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -2677,108 +219,13 @@
             "days": [
               "wednesday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "4-chome",
-      "area_name_ja": "小山4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "friday"
-              },
-              {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "4-chome",
-      "area_name_ja": "戸越4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "tuesday"
-              },
-              {
-                "week": 4,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "4-chome",
-      "area_name_ja": "中延4丁目",
+      "area_id": "5-chome",
+      "area_name_ja": "西大井5丁目",
       "categories": [
         {
           "category_id": "burnable",
@@ -2789,8 +236,7 @@
               "tuesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -2800,15 +246,14 @@
             "pattern": [
               {
                 "week": 1,
-                "day": "wednesday"
+                "day": "thursday"
               },
               {
                 "week": 3,
-                "day": "wednesday"
+                "day": "thursday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -2816,63 +261,15 @@
           "collection_days": {
             "type": "weekly",
             "days": [
-              "saturday"
+              "wednesday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "4-chome",
-      "area_name_ja": "旗の台4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "wednesday"
-              },
-              {
-                "week": 4,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "4-chome",
-      "area_name_ja": "二葉4丁目",
+      "area_id": "5-chome1-10",
+      "area_name_ja": "東大井5丁目1～10番",
       "categories": [
         {
           "category_id": "burnable",
@@ -2883,8 +280,7 @@
               "wednesday",
               "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -2894,485 +290,14 @@
             "pattern": [
               {
                 "week": 2,
-                "day": "monday"
-              },
-              {
-                "week": 4,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "4-chome",
-      "area_name_ja": "豊町4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "monday"
-              },
-              {
-                "week": 3,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "5-chome",
-      "area_name_ja": "大崎5丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "saturday"
-              },
-              {
-                "week": 4,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "5-chome",
-      "area_name_ja": "西五反田5丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "wednesday"
-              },
-              {
-                "week": 4,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "5-chome",
-      "area_name_ja": "東五反田5丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "saturday"
-              },
-              {
-                "week": 3,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "5-chome",
-      "area_name_ja": "荏原5丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
                 "day": "friday"
               },
               {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "5-chome",
-      "area_name_ja": "小山5丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "friday"
-              },
-              {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "5-chome",
-      "area_name_ja": "戸越5丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "tuesday"
-              },
-              {
-                "week": 3,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "5-chome",
-      "area_name_ja": "中延5丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "wednesday"
-              },
-              {
                 "week": 4,
-                "day": "wednesday"
+                "day": "friday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "5-chome",
-      "area_name_ja": "旗の台5丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "wednesday"
-              },
-              {
-                "week": 4,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "5-chome",
-      "area_name_ja": "豊町5丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "monday"
-              },
-              {
-                "week": 3,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -3382,13 +307,12 @@
             "days": [
               "thursday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "5-chome139",
+      "area_id": "5-chome1-39",
       "area_name_ja": "八潮5丁目1～39号",
       "categories": [
         {
@@ -3401,8 +325,7 @@
               "wednesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -3419,8 +342,7 @@
                 "day": "saturday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -3430,13 +352,12 @@
             "days": [
               "monday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "5-chome4069-",
+      "area_id": "5-chome40-69",
       "area_name_ja": "八潮5丁目40～69号棟・わかくさ荘",
       "categories": [
         {
@@ -3449,8 +370,7 @@
               "thursday",
               "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -3467,8 +387,7 @@
                 "day": "saturday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -3478,14 +397,13 @@
             "days": [
               "monday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
       "area_id": "6-chome",
-      "area_name_ja": "西五反田6丁目",
+      "area_name_ja": "西大井6丁目（荏原エリア）",
       "categories": [
         {
           "category_id": "burnable",
@@ -3493,11 +411,10 @@
           "collection_days": {
             "type": "weekly",
             "days": [
-              "monday",
-              "thursday"
+              "wednesday",
+              "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -3507,15 +424,14 @@
             "pattern": [
               {
                 "week": 2,
-                "day": "wednesday"
+                "day": "monday"
               },
               {
                 "week": 4,
-                "day": "wednesday"
+                "day": "monday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -3523,16 +439,15 @@
           "collection_days": {
             "type": "weekly",
             "days": [
-              "friday"
+              "thursday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "6-chome",
-      "area_name_ja": "荏原6丁目",
+      "area_id": "6-chome1-16",
+      "area_name_ja": "東大井6丁目1～16番",
       "categories": [
         {
           "category_id": "burnable",
@@ -3540,11 +455,10 @@
           "collection_days": {
             "type": "weekly",
             "days": [
-              "monday",
-              "thursday"
+              "wednesday",
+              "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -3561,102 +475,7 @@
                 "day": "friday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "6-chome",
-      "area_name_ja": "小山6丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "friday"
-              },
-              {
-                "week": 4,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "6-chome",
-      "area_name_ja": "戸越6丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "monday"
-              },
-              {
-                "week": 4,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -3666,14 +485,13 @@
             "days": [
               "thursday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "6-chome",
-      "area_name_ja": "中延6丁目",
+      "area_id": "6-chome17",
+      "area_name_ja": "東大井6丁目17番",
       "categories": [
         {
           "category_id": "burnable",
@@ -3684,8 +502,7 @@
               "tuesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -3694,16 +511,15 @@
             "type": "monthly",
             "pattern": [
               {
-                "week": 2,
-                "day": "wednesday"
+                "week": 1,
+                "day": "monday"
               },
               {
-                "week": 4,
-                "day": "wednesday"
+                "week": 3,
+                "day": "monday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -3713,14 +529,13 @@
             "days": [
               "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "6-chome",
-      "area_name_ja": "旗の台6丁目",
+      "area_id": "6-chome18",
+      "area_name_ja": "南大井6丁目18番",
       "categories": [
         {
           "category_id": "burnable",
@@ -3729,151 +544,10 @@
             "type": "weekly",
             "days": [
               "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "friday"
-              },
-              {
-                "week": 4,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "6-chome",
-      "area_name_ja": "豊町6丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
               "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "monday"
-              },
-              {
-                "week": 4,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "7-chome",
-      "area_name_ja": "西五反田7丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "wednesday"
-              },
-              {
-                "week": 4,
-                "day": "wednesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "7-chome",
-      "area_name_ja": "荏原7丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -3882,16 +556,15 @@
             "type": "monthly",
             "pattern": [
               {
-                "week": 2,
-                "day": "friday"
+                "week": 1,
+                "day": "monday"
               },
               {
-                "week": 4,
-                "day": "friday"
+                "week": 3,
+                "day": "monday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -3899,10 +572,9 @@
           "collection_days": {
             "type": "weekly",
             "days": [
-              "tuesday"
+              "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
@@ -3919,8 +591,7 @@
               "monday",
               "thursday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -3937,8 +608,7 @@
                 "day": "friday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -3948,13 +618,1288 @@
             "days": [
               "tuesday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "8-chome",
+      "area_id": "ehara-1-chome",
+      "area_name_ja": "荏原1丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "saturday"
+              },
+              {
+                "week": 3,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "ehara-2-chome",
+      "area_name_ja": "荏原2丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "saturday"
+              },
+              {
+                "week": 4,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "ehara-3-chome",
+      "area_name_ja": "荏原3丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "saturday"
+              },
+              {
+                "week": 4,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "ehara-4-chome",
+      "area_name_ja": "荏原4丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "saturday"
+              },
+              {
+                "week": 4,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "ehara-5-chome",
+      "area_name_ja": "荏原5丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "friday"
+              },
+              {
+                "week": 3,
+                "day": "friday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "ehara-6-chome",
+      "area_name_ja": "荏原6丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "friday"
+              },
+              {
+                "week": 3,
+                "day": "friday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "ehara-7-chome",
+      "area_name_ja": "荏原7丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "friday"
+              },
+              {
+                "week": 4,
+                "day": "friday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "higashi-shinagawa-1-chome",
+      "area_name_ja": "東品川1丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday",
+              "saturday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "tuesday"
+              },
+              {
+                "week": 4,
+                "day": "tuesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "higashi-shinagawa-2-chome",
+      "area_name_ja": "東品川2丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday",
+              "saturday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "tuesday"
+              },
+              {
+                "week": 4,
+                "day": "tuesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "higashi-shinagawa-3-chome",
+      "area_name_ja": "東品川3丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday",
+              "saturday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "tuesday"
+              },
+              {
+                "week": 4,
+                "day": "tuesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "higashi-shinagawa-4-chome",
+      "area_name_ja": "東品川4丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday",
+              "saturday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "friday"
+              },
+              {
+                "week": 4,
+                "day": "friday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "higashi-shinagawa-5-chome",
+      "area_name_ja": "東品川5丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday",
+              "saturday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "tuesday"
+              },
+              {
+                "week": 4,
+                "day": "tuesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "kami-osaki-1-chome",
+      "area_name_ja": "上大崎1丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "saturday"
+              },
+              {
+                "week": 3,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "kami-osaki-2-chome",
+      "area_name_ja": "上大崎2丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "wednesday"
+              },
+              {
+                "week": 3,
+                "day": "wednesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "friday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "kami-osaki-3-chome",
+      "area_name_ja": "上大崎3丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "wednesday"
+              },
+              {
+                "week": 3,
+                "day": "wednesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "friday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "kami-osaki-4-chome",
+      "area_name_ja": "上大崎4丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "wednesday"
+              },
+              {
+                "week": 3,
+                "day": "wednesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "friday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "kita-shinagawa-1-chome",
+      "area_name_ja": "北品川1丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday",
+              "saturday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "tuesday"
+              },
+              {
+                "week": 3,
+                "day": "tuesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "kita-shinagawa-2-chome",
+      "area_name_ja": "北品川2丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday",
+              "saturday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "tuesday"
+              },
+              {
+                "week": 3,
+                "day": "tuesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "kita-shinagawa-3-chome",
+      "area_name_ja": "北品川3丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday",
+              "saturday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "friday"
+              },
+              {
+                "week": 4,
+                "day": "friday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "kita-shinagawa-4-chome",
+      "area_name_ja": "北品川4丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "saturday"
+              },
+              {
+                "week": 4,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "kita-shinagawa-5-chome",
+      "area_name_ja": "北品川5丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "saturday"
+              },
+              {
+                "week": 4,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "kita-shinagawa-6-chome",
+      "area_name_ja": "北品川6丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "saturday"
+              },
+              {
+                "week": 4,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "nishi-gotanda-1-chome",
+      "area_name_ja": "西五反田1丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "saturday"
+              },
+              {
+                "week": 4,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "nishi-gotanda-2-chome",
+      "area_name_ja": "西五反田2丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "saturday"
+              },
+              {
+                "week": 3,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "friday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "nishi-gotanda-3-chome",
+      "area_name_ja": "西五反田3丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "wednesday"
+              },
+              {
+                "week": 3,
+                "day": "wednesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "friday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "nishi-gotanda-4-chome",
+      "area_name_ja": "西五反田4丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "wednesday"
+              },
+              {
+                "week": 4,
+                "day": "wednesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "friday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "nishi-gotanda-5-chome",
+      "area_name_ja": "西五反田5丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "wednesday"
+              },
+              {
+                "week": 4,
+                "day": "wednesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "friday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "nishi-gotanda-6-chome",
+      "area_name_ja": "西五反田6丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "wednesday"
+              },
+              {
+                "week": 4,
+                "day": "wednesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "friday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "nishi-gotanda-7-chome",
+      "area_name_ja": "西五反田7丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "wednesday"
+              },
+              {
+                "week": 4,
+                "day": "wednesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "friday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "nishi-gotanda-8-chome",
       "area_name_ja": "西五反田8丁目",
       "categories": [
         {
@@ -3966,8 +1911,7 @@
               "monday",
               "thursday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -3984,8 +1928,7 @@
                 "day": "saturday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -3995,14 +1938,13 @@
             "days": [
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "area-162357",
-      "area_name_ja": "大崎１丁目",
+      "area_id": "nobunobe-1-chome",
+      "area_name_ja": "中延1丁目",
       "categories": [
         {
           "category_id": "burnable",
@@ -4010,11 +1952,186 @@
           "collection_days": {
             "type": "weekly",
             "days": [
-              "monday",
-              "thursday"
+              "tuesday",
+              "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "thursday"
+              },
+              {
+                "week": 3,
+                "day": "thursday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "nobunobe-2-chome",
+      "area_name_ja": "中延2丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday",
+              "friday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "thursday"
+              },
+              {
+                "week": 3,
+                "day": "thursday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "nobunobe-3-chome",
+      "area_name_ja": "中延3丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday",
+              "friday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "wednesday"
+              },
+              {
+                "week": 3,
+                "day": "wednesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "saturday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "nobunobe-4-chome",
+      "area_name_ja": "中延4丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday",
+              "friday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "wednesday"
+              },
+              {
+                "week": 3,
+                "day": "wednesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "saturday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "nobunobe-5-chome",
+      "area_name_ja": "中延5丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday",
+              "friday"
+            ]
+          }
         },
         {
           "category_id": "non-burnable",
@@ -4024,15 +2141,14 @@
             "pattern": [
               {
                 "week": 2,
-                "day": "saturday"
+                "day": "wednesday"
               },
               {
                 "week": 4,
-                "day": "saturday"
+                "day": "wednesday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -4040,15 +2156,58 @@
           "collection_days": {
             "type": "weekly",
             "days": [
-              "tuesday"
+              "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "ooi1-chome",
+      "area_id": "nobunobe-6-chome",
+      "area_name_ja": "中延6丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday",
+              "friday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "wednesday"
+              },
+              {
+                "week": 4,
+                "day": "wednesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "saturday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "oi-1-chome",
       "area_name_ja": "大井1丁目",
       "categories": [
         {
@@ -4060,8 +2219,7 @@
               "tuesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -4078,8 +2236,7 @@
                 "day": "thursday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -4089,201 +2246,12 @@
             "days": [
               "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "ooi1-chome",
-      "area_name_ja": "西大井1丁目（荏原エリア）",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "monday"
-              },
-              {
-                "week": 3,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi1-chome",
-      "area_name_ja": "東大井1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "friday"
-              },
-              {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi1-chome",
-      "area_name_ja": "南大井1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "monday"
-              },
-              {
-                "week": 4,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi1-chomeshinagawa",
-      "area_name_ja": "西大井1丁目（品川エリア）",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "thursday"
-              },
-              {
-                "week": 3,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi2-chome",
+      "area_id": "oi-2-chome",
       "area_name_ja": "大井2丁目",
       "categories": [
         {
@@ -4295,8 +2263,7 @@
               "tuesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -4313,8 +2280,7 @@
                 "day": "thursday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -4324,154 +2290,12 @@
             "days": [
               "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "ooi2-chome",
-      "area_name_ja": "西大井2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "thursday"
-              },
-              {
-                "week": 3,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi2-chome",
-      "area_name_ja": "東大井2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "friday"
-              },
-              {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi2-chome",
-      "area_name_ja": "南大井2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "monday"
-              },
-              {
-                "week": 4,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi3-chome",
+      "area_id": "oi-3-chome",
       "area_name_ja": "大井3丁目",
       "categories": [
         {
@@ -4483,8 +2307,7 @@
               "tuesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -4501,8 +2324,7 @@
                 "day": "thursday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -4512,154 +2334,12 @@
             "days": [
               "wednesday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "ooi3-chome",
-      "area_name_ja": "西大井3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "thursday"
-              },
-              {
-                "week": 3,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi3-chome",
-      "area_name_ja": "東大井3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "friday"
-              },
-              {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi3-chome",
-      "area_name_ja": "南大井3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "monday"
-              },
-              {
-                "week": 4,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi4-chome",
+      "area_id": "oi-4-chome",
       "area_name_ja": "大井4丁目",
       "categories": [
         {
@@ -4671,8 +2351,7 @@
               "tuesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -4689,8 +2368,7 @@
                 "day": "thursday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -4700,154 +2378,12 @@
             "days": [
               "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "ooi4-chome",
-      "area_name_ja": "西大井4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "thursday"
-              },
-              {
-                "week": 3,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi4-chome",
-      "area_name_ja": "東大井4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "friday"
-              },
-              {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi4-chome",
-      "area_name_ja": "南大井4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "monday"
-              },
-              {
-                "week": 4,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi5-chome",
+      "area_id": "oi-5-chome",
       "area_name_ja": "大井5丁目",
       "categories": [
         {
@@ -4859,8 +2395,7 @@
               "tuesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -4877,8 +2412,7 @@
                 "day": "thursday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -4888,201 +2422,12 @@
             "days": [
               "wednesday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "ooi5-chome",
-      "area_name_ja": "西大井5丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "thursday"
-              },
-              {
-                "week": 3,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi5-chome",
-      "area_name_ja": "南大井5丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "monday"
-              },
-              {
-                "week": 3,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi5-chome110",
-      "area_name_ja": "東大井5丁目1～10番",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "friday"
-              },
-              {
-                "week": 4,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi5-chome110",
-      "area_name_ja": "東大井5丁目1～10番以外",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "friday"
-              },
-              {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi6-chome",
+      "area_id": "oi-6-chome",
       "area_name_ja": "大井6丁目",
       "categories": [
         {
@@ -5100,8 +2445,7 @@
                 "day": "monday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -5118,8 +2462,7 @@
                 "day": "monday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -5129,296 +2472,12 @@
             "days": [
               "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "ooi6-chome",
-      "area_name_ja": "西大井6丁目（荏原エリア）",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "monday"
-              },
-              {
-                "week": 4,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi6-chome116",
-      "area_name_ja": "東大井6丁目1～16番",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "friday"
-              },
-              {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi6-chome17",
-      "area_name_ja": "東大井6丁目17番",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "monday"
-              },
-              {
-                "week": 3,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi6-chome18",
-      "area_name_ja": "南大井6丁目18番",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "wednesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "monday"
-              },
-              {
-                "week": 3,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi6-chome18",
-      "area_name_ja": "南大井6丁目18番以外",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "monday"
-              },
-              {
-                "week": 3,
-                "day": "monday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi6-chomeshinagawa",
-      "area_name_ja": "西大井6丁目（品川エリア）",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "thursday"
-              },
-              {
-                "week": 3,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "ooi7-chome",
+      "area_id": "oi-7-chome",
       "area_name_ja": "大井7丁目",
       "categories": [
         {
@@ -5430,8 +2489,7 @@
               "tuesday",
               "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -5448,8 +2506,7 @@
                 "day": "monday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -5459,625 +2516,13 @@
             "days": [
               "wednesday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "shinagawa1-chome",
-      "area_name_ja": "北品川1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "tuesday"
-              },
-              {
-                "week": 3,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa1-chome",
-      "area_name_ja": "西品川1丁目（荏原エリア）",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "tuesday"
-              },
-              {
-                "week": 3,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa1-chome",
-      "area_name_ja": "東品川1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "tuesday"
-              },
-              {
-                "week": 4,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa1-chome",
-      "area_name_ja": "南品川1丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "tuesday"
-              },
-              {
-                "week": 3,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa1-chomeshinagawa",
-      "area_name_ja": "西品川1丁目（品川エリア）",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "friday"
-              },
-              {
-                "week": 3,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa2-chome",
-      "area_name_ja": "北品川2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "tuesday"
-              },
-              {
-                "week": 3,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa2-chome",
-      "area_name_ja": "西品川2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "thursday"
-              },
-              {
-                "week": 4,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa2-chome",
-      "area_name_ja": "東品川2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "tuesday"
-              },
-              {
-                "week": 4,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa2-chome",
-      "area_name_ja": "南品川2丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 1,
-                "day": "tuesday"
-              },
-              {
-                "week": 3,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa3-chome",
-      "area_name_ja": "北品川3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "friday"
-              },
-              {
-                "week": 4,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa3-chome",
-      "area_name_ja": "西品川3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday",
-              "friday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "thursday"
-              },
-              {
-                "week": 4,
-                "day": "thursday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa3-chome",
-      "area_name_ja": "東品川3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "tuesday"
-              },
-              {
-                "week": 4,
-                "day": "tuesday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa3-chome",
-      "area_name_ja": "南品川3丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "friday"
-              },
-              {
-                "week": 4,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa4-chome",
-      "area_name_ja": "北品川4丁目",
+      "area_id": "osaki-1-chome",
+      "area_name_ja": "大崎１丁目",
       "categories": [
         {
           "category_id": "burnable",
@@ -6088,8 +2533,7 @@
               "monday",
               "thursday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -6106,8 +2550,7 @@
                 "day": "saturday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -6117,108 +2560,13 @@
             "days": [
               "tuesday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "shinagawa4-chome",
-      "area_name_ja": "東品川4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "friday"
-              },
-              {
-                "week": 4,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa4-chome",
-      "area_name_ja": "南品川4丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "wednesday",
-              "saturday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "friday"
-              },
-              {
-                "week": 4,
-                "day": "friday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa5-chome",
-      "area_name_ja": "北品川5丁目",
+      "area_id": "osaki-2-chome",
+      "area_name_ja": "大崎2丁目",
       "categories": [
         {
           "category_id": "burnable",
@@ -6229,8 +2577,7 @@
               "monday",
               "thursday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -6247,8 +2594,7 @@
                 "day": "saturday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -6258,14 +2604,145 @@
             "days": [
               "tuesday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "shinagawa5-chome",
-      "area_name_ja": "東品川5丁目",
+      "area_id": "osaki-3-chome",
+      "area_name_ja": "大崎3丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "saturday"
+              },
+              {
+                "week": 4,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "osaki-4-chome",
+      "area_name_ja": "大崎4丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "saturday"
+              },
+              {
+                "week": 4,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "osaki-5-chome",
+      "area_name_ja": "大崎5丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "monday",
+              "thursday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "saturday"
+              },
+              {
+                "week": 4,
+                "day": "saturday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "tuesday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "togoshi-1-chome",
+      "area_name_ja": "戸越1丁目",
       "categories": [
         {
           "category_id": "burnable",
@@ -6276,8 +2753,7 @@
               "wednesday",
               "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -6294,8 +2770,7 @@
                 "day": "tuesday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -6303,16 +2778,15 @@
           "collection_days": {
             "type": "weekly",
             "days": [
-              "monday"
+              "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "shinagawa5-chome",
-      "area_name_ja": "南品川5丁目",
+      "area_id": "togoshi-2-chome",
+      "area_name_ja": "戸越2丁目",
       "categories": [
         {
           "category_id": "burnable",
@@ -6323,8 +2797,7 @@
               "wednesday",
               "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -6334,15 +2807,14 @@
             "pattern": [
               {
                 "week": 2,
-                "day": "friday"
+                "day": "tuesday"
               },
               {
                 "week": 4,
-                "day": "friday"
+                "day": "tuesday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "recyclable",
@@ -6350,63 +2822,15 @@
           "collection_days": {
             "type": "weekly",
             "days": [
-              "thursday"
+              "friday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     },
     {
-      "area_id": "shinagawa6-chome",
-      "area_name_ja": "北品川6丁目",
-      "categories": [
-        {
-          "category_id": "burnable",
-          "name_ja": "燃やすごみ",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "monday",
-              "thursday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "non-burnable",
-          "name_ja": "陶器・ガラス・金属ごみ",
-          "collection_days": {
-            "type": "monthly",
-            "pattern": [
-              {
-                "week": 2,
-                "day": "saturday"
-              },
-              {
-                "week": 4,
-                "day": "saturday"
-              }
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        },
-        {
-          "category_id": "recyclable",
-          "name_ja": "資源",
-          "collection_days": {
-            "type": "weekly",
-            "days": [
-              "tuesday"
-            ]
-          },
-          "notes_ja": "祝日も収集あり"
-        }
-      ]
-    },
-    {
-      "area_id": "shinagawa6-chome",
-      "area_name_ja": "南品川6丁目",
+      "area_id": "togoshi-3-chome",
+      "area_name_ja": "戸越3丁目",
       "categories": [
         {
           "category_id": "burnable",
@@ -6417,8 +2841,7 @@
               "wednesday",
               "saturday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         },
         {
           "category_id": "non-burnable",
@@ -6428,15 +2851,146 @@
             "pattern": [
               {
                 "week": 2,
-                "day": "friday"
+                "day": "tuesday"
               },
               {
                 "week": 4,
-                "day": "friday"
+                "day": "tuesday"
               }
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "friday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "togoshi-4-chome",
+      "area_name_ja": "戸越4丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday",
+              "saturday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "tuesday"
+              },
+              {
+                "week": 4,
+                "day": "tuesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "friday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "togoshi-5-chome",
+      "area_name_ja": "戸越5丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday",
+              "saturday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 1,
+                "day": "tuesday"
+              },
+              {
+                "week": 3,
+                "day": "tuesday"
+              }
+            ]
+          }
+        },
+        {
+          "category_id": "recyclable",
+          "name_ja": "資源",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "friday"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "togoshi-6-chome",
+      "area_name_ja": "戸越6丁目",
+      "categories": [
+        {
+          "category_id": "burnable",
+          "name_ja": "燃やすごみ",
+          "collection_days": {
+            "type": "weekly",
+            "days": [
+              "wednesday",
+              "saturday"
+            ]
+          }
+        },
+        {
+          "category_id": "non-burnable",
+          "name_ja": "陶器・ガラス・金属ごみ",
+          "collection_days": {
+            "type": "monthly",
+            "pattern": [
+              {
+                "week": 2,
+                "day": "monday"
+              },
+              {
+                "week": 4,
+                "day": "monday"
+              }
+            ]
+          }
         },
         {
           "category_id": "recyclable",
@@ -6446,8 +3000,7 @@
             "days": [
               "thursday"
             ]
-          },
-          "notes_ja": "祝日も収集あり"
+          }
         }
       ]
     }

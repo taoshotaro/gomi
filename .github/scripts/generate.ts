@@ -9,21 +9,24 @@
  *   5. VALIDATE  — schema validation, write files, update cities.json
  *
  * Provider config (env vars):
- *   ANTHROPIC_BASE_URL  — API base URL (default: https://api.anthropic.com)
- *   MODEL               — Model name (default: claude-sonnet-4-20250514)
- *   ANTHROPIC_API_KEY    — API key (required)
+ *   LLM_BASE_URL    — API base URL (default: https://api.z.ai/api/paas/v4/)
+ *   LLM_API_KEY     — API key (required; falls back to ANTHROPIC_API_KEY)
+ *   MODEL           — Model name (default: glm-4.7)
  *
  * Usage: bun run .github/scripts/generate.ts --city <name_ja> --prefecture <prefecture_ja> [--url <source_url>]
  *
  * City and prefecture IDs are auto-detected by the LLM in the discover step.
  */
 
-import Anthropic from "@anthropic-ai/sdk";
+import { generateText, generateObject, tool } from "ai";
+import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
+import { z } from "zod";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
 import {
   readFileSync,
   writeFileSync,
+  copyFileSync,
   mkdirSync,
   existsSync,
   readdirSync,
@@ -32,20 +35,44 @@ import { join, resolve } from "path";
 import { parseArgs } from "util";
 import { execSync } from "child_process";
 
+import { discoverResultSchema, scheduleSchema, separationSchema } from "./schemas.js";
+
 const ROOT = resolve(import.meta.dirname, "../..");
 const TMP_DIR = "/tmp/gomi-raw";
 const PROMPTS_DIR = join(ROOT, ".github/scripts/prompts");
-const MODEL = process.env.MODEL || "claude-sonnet-4-20250514";
+
+// ─── Provider setup ──────────────────────────────────────────────────────────
+
+const LLM_API_KEY =
+  process.env.LLM_API_KEY || process.env.ANTHROPIC_API_KEY || "";
+const LLM_BASE_URL =
+  process.env.LLM_BASE_URL ||
+  process.env.ANTHROPIC_BASE_URL ||
+  "https://api.z.ai/api/paas/v4/";
+const MODEL_ID = process.env.MODEL || "glm-4.7";
+
+const provider = createOpenAICompatible({
+  name: "llm",
+  baseURL: LLM_BASE_URL,
+  apiKey: LLM_API_KEY,
+});
+const model = provider(MODEL_ID);
 
 // ─── CLI ────────────────────────────────────────────────────────────────────
 
 const MAX_FIX_RETRIES_DEFAULT = 3;
+
+const STEPS = ["discover", "download", "schedule", "separation", "validate"] as const;
+type Step = (typeof STEPS)[number];
 
 interface GenerateArgs {
   city: string;
   prefecture: string;
   url?: string;
   maxFixRetries: number;
+  skipTo?: Step;
+  fixturesDir?: string;
+  saveFixtures: boolean;
 }
 
 function parseCliArgs(): GenerateArgs {
@@ -56,13 +83,26 @@ function parseCliArgs(): GenerateArgs {
       prefecture: { type: "string" },
       url: { type: "string" },
       "max-fix-retries": { type: "string" },
+      "skip-to": { type: "string" },
+      "fixtures-dir": { type: "string" },
+      "save-fixtures": { type: "boolean" },
     },
   });
 
   if (!values.city || !values.prefecture) {
     console.error(
-      "Usage: bun run generate.ts --city <name_ja> --prefecture <prefecture_ja> [--url <url>] [--max-fix-retries <n>]"
+      "Usage: bun run generate.ts --city <name_ja> --prefecture <prefecture_ja> [--url <url>] [--max-fix-retries <n>] [--skip-to <step>] [--fixtures-dir <path>] [--save-fixtures]"
     );
+    process.exit(1);
+  }
+
+  const skipTo = values["skip-to"] as Step | undefined;
+  if (skipTo && !STEPS.includes(skipTo)) {
+    console.error(`Invalid --skip-to value: ${skipTo}. Valid steps: ${STEPS.join(", ")}`);
+    process.exit(1);
+  }
+  if (skipTo === "discover") {
+    console.error("--skip-to discover is a no-op (discover is the first step). Omit --skip-to to run the full pipeline.");
     process.exit(1);
   }
 
@@ -73,6 +113,9 @@ function parseCliArgs(): GenerateArgs {
     maxFixRetries: values["max-fix-retries"]
       ? parseInt(values["max-fix-retries"], 10)
       : MAX_FIX_RETRIES_DEFAULT,
+    skipTo,
+    fixturesDir: values["fixtures-dir"],
+    saveFixtures: values["save-fixtures"] ?? false,
   };
 }
 
@@ -106,15 +149,6 @@ function extractCode(text: string): string {
     return fenced[0];
   }
   return text.trim();
-}
-
-function getTextFromResponse(
-  response: Anthropic.Messages.Message
-): string {
-  return response.content
-    .filter((b): b is Anthropic.Messages.TextBlock => b.type === "text")
-    .map((b) => b.text)
-    .join("\n");
 }
 
 /** Strip HTML to plain text, preserving table/list structure */
@@ -167,49 +201,9 @@ function decodeContent(buffer: Uint8Array): string {
   }
 }
 
-// ─── Custom tool definitions & execution ────────────────────────────────────
+// ─── Tool implementations ────────────────────────────────────────────────────
 
-const CUSTOM_TOOLS: Anthropic.Messages.Tool[] = [
-  {
-    name: "web_search",
-    description:
-      "Search the web for information. Returns a list of search results with titles, URLs, and snippets.",
-    input_schema: {
-      type: "object" as const,
-      properties: {
-        query: {
-          type: "string",
-          description: "The search query",
-        },
-      },
-      required: ["query"],
-    },
-  },
-  {
-    name: "fetch_page",
-    description:
-      "Fetch a web page and return its text content. Useful for reading official municipal pages, downloading CSV data, etc.",
-    input_schema: {
-      type: "object" as const,
-      properties: {
-        url: {
-          type: "string",
-          description: "The URL to fetch",
-        },
-        max_length: {
-          type: "number",
-          description:
-            "Maximum characters to return (default: 50000). Use smaller values for large pages.",
-        },
-      },
-      required: ["url"],
-    },
-  },
-];
-
-async function executeWebSearch(
-  query: string
-): Promise<string> {
+async function executeWebSearch(query: string): Promise<string> {
   // Use DuckDuckGo HTML search (no API key needed)
   const encoded = encodeURIComponent(query);
   const url = `https://html.duckduckgo.com/html/?q=${encoded}`;
@@ -294,98 +288,60 @@ async function executeFetchPage(
   }
 }
 
-async function handleToolCall(
-  toolName: string,
-  toolInput: Record<string, unknown>
-): Promise<string> {
-  switch (toolName) {
-    case "web_search":
-      return executeWebSearch(toolInput.query as string);
-    case "fetch_page":
-      return executeFetchPage(
-        toolInput.url as string,
-        (toolInput.max_length as number) || 50000
+// ─── AI SDK tool definitions ─────────────────────────────────────────────────
+
+const webSearchTool = tool({
+  description:
+    "Search the web for information. Returns a list of search results with titles, URLs, and snippets.",
+  parameters: z.object({
+    query: z.string().describe("The search query"),
+  }),
+  execute: async ({ query }) => {
+    console.log(`    [tool] web_search: ${JSON.stringify(query).slice(0, 100)}`);
+    return executeWebSearch(query);
+  },
+});
+
+const fetchPageTool = tool({
+  description:
+    "Fetch a web page and return its text content. Useful for reading official municipal pages, downloading CSV data, etc.",
+  parameters: z.object({
+    url: z.string().describe("The URL to fetch"),
+    max_length: z
+      .number()
+      .optional()
+      .default(50000)
+      .describe(
+        "Maximum characters to return (default: 50000). Use smaller values for large pages."
+      ),
+  }),
+  execute: async ({ url, max_length }) => {
+    console.log(`    [tool] fetch_page: ${url.slice(0, 100)}`);
+    return executeFetchPage(url, max_length);
+  },
+});
+
+const tools = { web_search: webSearchTool, fetch_page: fetchPageTool };
+
+// ─── Retry wrapper ───────────────────────────────────────────────────────────
+
+async function retryStep<T>(
+  name: string,
+  fn: () => Promise<T>,
+  maxRetries = 2
+): Promise<T> {
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      return await fn();
+    } catch (err) {
+      if (attempt === maxRetries) throw err;
+      console.log(
+        `  ${name} failed (attempt ${attempt + 1}/${maxRetries + 1}), retrying...`
       );
-    default:
-      return `Unknown tool: ${toolName}`;
-  }
-}
-
-// ─── LLM call with tool-use loop ────────────────────────────────────────────
-
-async function callLlm(
-  client: Anthropic,
-  prompt: string,
-  options: {
-    tools?: boolean;
-    maxToolRounds?: number;
-    thinkingBudget?: number;
-    maxTokens?: number;
-  } = {}
-): Promise<string> {
-  const {
-    tools = false,
-    maxToolRounds = 15,
-    thinkingBudget = 8000,
-    maxTokens = 16000,
-  } = options;
-
-  const messages: Anthropic.Messages.MessageParam[] = [
-    { role: "user", content: prompt },
-  ];
-
-  for (let round = 0; round <= maxToolRounds; round++) {
-    const response = await client.messages.create({
-      model: MODEL,
-      max_tokens: maxTokens,
-      thinking: {
-        type: "enabled",
-        budget_tokens: thinkingBudget,
-      },
-      messages,
-      ...(tools ? { tools: CUSTOM_TOOLS } : {}),
-    });
-
-    // If no tool use, return the text
-    const toolUseBlocks = response.content.filter(
-      (b): b is Anthropic.Messages.ToolUseBlock => b.type === "tool_use"
-    );
-
-    if (toolUseBlocks.length === 0 || response.stop_reason === "end_turn") {
-      return getTextFromResponse(response);
+      console.log(`  Error: ${err}`);
     }
-
-    // Add assistant response to messages
-    messages.push({ role: "assistant", content: response.content });
-
-    // Execute tools and add results
-    const toolResults: Anthropic.Messages.ToolResultBlockParam[] = [];
-    for (const toolUse of toolUseBlocks) {
-      console.log(`    [tool] ${toolUse.name}: ${JSON.stringify(toolUse.input).slice(0, 100)}`);
-      const result = await handleToolCall(
-        toolUse.name,
-        toolUse.input as Record<string, unknown>
-      );
-      toolResults.push({
-        type: "tool_result",
-        tool_use_id: toolUse.id,
-        content: result,
-      });
-    }
-
-    messages.push({ role: "user", content: toolResults });
   }
-
-  // Exhausted rounds — return whatever text we have
-  console.warn("  Warning: max tool rounds reached");
-  return getTextFromResponse(
-    await client.messages.create({
-      model: MODEL,
-      max_tokens: maxTokens,
-      thinking: { type: "enabled", budget_tokens: thinkingBudget },
-      messages,
-    })
-  );
+  throw new Error("unreachable");
 }
 
 // ─── Step 1: DISCOVER ───────────────────────────────────────────────────────
@@ -399,10 +355,7 @@ interface DiscoverResult {
   prefectureId: string;
 }
 
-async function discover(
-  client: Anthropic,
-  args: GenerateArgs
-): Promise<DiscoverResult> {
+async function discover(args: GenerateArgs): Promise<DiscoverResult> {
   console.log("Step 1: Discovering data sources...");
 
   let prompt = loadPrompt("discover");
@@ -414,9 +367,12 @@ async function discover(
       args.url ? `Start with this official URL: ${args.url}` : ""
     );
 
-  const text = await callLlm(client, prompt, {
-    tools: true,
-    maxToolRounds: 15,
+  const { text } = await generateText({
+    model,
+    prompt,
+    tools,
+    maxSteps: 15,
+    maxRetries: 3,
   });
 
   const result = extractJson(text) as Record<string, unknown>;
@@ -506,7 +462,6 @@ async function downloadAll(
 // ─── Step 3: SCHEDULE ───────────────────────────────────────────────────────
 
 async function generateSchedule(
-  client: Anthropic,
   sources: DiscoverResult,
   args: GenerateArgs,
   tmpDir: string,
@@ -535,13 +490,13 @@ async function generateSchedule(
       .replace(/\{\{CITY_NAME_JA\}\}/g, args.city)
       .replace("{{SOURCE_URL}}", sources.officialUrl);
 
-    const code = extractCode(
-      await callLlm(client, prompt, {
-        maxTokens: 8000,
-        thinkingBudget: 6000,
-      })
-    );
+    const { text } = await generateText({
+      model,
+      prompt,
+      maxRetries: 3,
+    });
 
+    const code = extractCode(text);
     const converterPath = "/tmp/convert-schedule.ts";
     writeFileSync(converterPath, code);
     console.log("  Running converter script...");
@@ -557,7 +512,6 @@ async function generateSchedule(
         "  Converter script failed, falling back to LLM extraction..."
       );
       await extractScheduleFromSources(
-        client,
         sources,
         args,
         tmpDir,
@@ -567,7 +521,6 @@ async function generateSchedule(
     }
   } else {
     await extractScheduleFromSources(
-      client,
       sources,
       args,
       tmpDir,
@@ -578,7 +531,6 @@ async function generateSchedule(
 }
 
 async function extractScheduleFromSources(
-  client: Anthropic,
   sources: DiscoverResult,
   args: GenerateArgs,
   tmpDir: string,
@@ -613,11 +565,12 @@ ${scheduleSchemaStr}
 
 Output ONLY valid JSON matching the schema.`;
 
-    const text = await callLlm(client, searchPrompt, {
-      tools: true,
-      maxToolRounds: 15,
-      maxTokens: 16000,
-      thinkingBudget: 10000,
+    const { text } = await generateText({
+      model,
+      prompt: searchPrompt,
+      tools,
+      maxSteps: 15,
+      maxRetries: 3,
     });
 
     const schedule = extractJson(text);
@@ -642,23 +595,40 @@ Output ONLY valid JSON matching the schema.`;
     .replace(/\{\{CITY_NAME_JA\}\}/g, args.city)
     .replace("{{SOURCE_URL}}", sources.officialUrl);
 
-  const responseText = await callLlm(client, prompt, {
-    maxTokens: 16000,
-    thinkingBudget: 10000,
-  });
+  // Try generateObject first, fall back to generateText + manual extraction
+  try {
+    const { object } = await generateObject({
+      model,
+      prompt,
+      schema: scheduleSchema,
+      maxRetries: 3,
+    });
 
-  const schedule = extractJson(responseText);
-  writeFileSync(
-    join(outDir, "schedule.json"),
-    JSON.stringify(schedule, null, 2) + "\n"
-  );
-  console.log("  Schedule extracted from text.");
+    writeFileSync(
+      join(outDir, "schedule.json"),
+      JSON.stringify(object, null, 2) + "\n"
+    );
+    console.log("  Schedule extracted via structured output.");
+  } catch (err) {
+    console.log(`  generateObject failed (${err}), falling back to text extraction...`);
+    const { text } = await generateText({
+      model,
+      prompt,
+      maxRetries: 3,
+    });
+
+    const schedule = extractJson(text);
+    writeFileSync(
+      join(outDir, "schedule.json"),
+      JSON.stringify(schedule, null, 2) + "\n"
+    );
+    console.log("  Schedule extracted from text.");
+  }
 }
 
 // ─── Step 4: SEPARATION ─────────────────────────────────────────────────────
 
 async function generateSeparation(
-  client: Anthropic,
   sources: DiscoverResult,
   args: GenerateArgs,
   tmpDir: string,
@@ -700,11 +670,12 @@ Requirements:
 - category_id must match common schedule categories (burnable, non-burnable, recyclable, plastic-containers, oversized)
 - Output ONLY valid JSON matching the schema.`;
 
-    const text = await callLlm(client, searchPrompt, {
-      tools: true,
-      maxToolRounds: 15,
-      maxTokens: 16000,
-      thinkingBudget: 8000,
+    const { text } = await generateText({
+      model,
+      prompt: searchPrompt,
+      tools,
+      maxSteps: 15,
+      maxRetries: 3,
     });
 
     const separation = extractJson(text);
@@ -727,17 +698,35 @@ Requirements:
     .replace(/\{\{PREFECTURE_ID\}\}/g, sources.prefectureId)
     .replace(/\{\{CITY_ID\}\}/g, sources.cityId);
 
-  const responseText = await callLlm(client, prompt, {
-    maxTokens: 16000,
-    thinkingBudget: 8000,
-  });
+  // Try generateObject first, fall back to generateText + manual extraction
+  try {
+    const { object } = await generateObject({
+      model,
+      prompt,
+      schema: separationSchema,
+      maxRetries: 3,
+    });
 
-  const separation = extractJson(responseText);
-  writeFileSync(
-    join(outDir, "separation.json"),
-    JSON.stringify(separation, null, 2) + "\n"
-  );
-  console.log("  Separation rules extracted.");
+    writeFileSync(
+      join(outDir, "separation.json"),
+      JSON.stringify(object, null, 2) + "\n"
+    );
+    console.log("  Separation rules extracted via structured output.");
+  } catch (err) {
+    console.log(`  generateObject failed (${err}), falling back to text extraction...`);
+    const { text } = await generateText({
+      model,
+      prompt,
+      maxRetries: 3,
+    });
+
+    const separation = extractJson(text);
+    writeFileSync(
+      join(outDir, "separation.json"),
+      JSON.stringify(separation, null, 2) + "\n"
+    );
+    console.log("  Separation rules extracted from text.");
+  }
 }
 
 // ─── Step 5: VALIDATE, AUTO-FIX & UPDATE ────────────────────────────────────
@@ -751,18 +740,18 @@ function validateData(outDir: string): ValidationError[] {
   const ajv = new Ajv({ allErrors: true });
   addFormats(ajv);
 
-  const scheduleSchema = JSON.parse(
+  const scheduleSchemaJson = JSON.parse(
     readFileSync(join(ROOT, "data/_schema/schedule.schema.json"), "utf-8")
   );
-  const separationSchema = JSON.parse(
+  const separationSchemaJson = JSON.parse(
     readFileSync(join(ROOT, "data/_schema/separation.schema.json"), "utf-8")
   );
 
   const results: ValidationError[] = [];
 
   const checks: Array<{ file: string; schema: object }> = [
-    { file: "schedule.json", schema: scheduleSchema },
-    { file: "separation.json", schema: separationSchema },
+    { file: "schedule.json", schema: scheduleSchemaJson },
+    { file: "separation.json", schema: separationSchemaJson },
   ];
 
   for (const { file, schema } of checks) {
@@ -785,25 +774,26 @@ function validateData(outDir: string): ValidationError[] {
 }
 
 async function autoFixFile(
-  client: Anthropic,
   outDir: string,
   error: ValidationError
 ): Promise<void> {
   const filePath = join(outDir, error.file);
   const data = readFileSync(filePath, "utf-8");
 
-  const schemaFile = error.file === "schedule.json"
-    ? "schedule.schema.json"
-    : "separation.schema.json";
+  const schemaFile =
+    error.file === "schedule.json"
+      ? "schedule.schema.json"
+      : "separation.schema.json";
   const schema = readFileSync(
     join(ROOT, "data/_schema", schemaFile),
     "utf-8"
   );
 
   // Truncate data if very large to fit context
-  const truncatedData = data.length > 80000
-    ? data.slice(0, 80000) + "\n... (truncated)"
-    : data;
+  const truncatedData =
+    data.length > 80000
+      ? data.slice(0, 80000) + "\n... (truncated)"
+      : data;
 
   const prompt = `Fix the following JSON data so it passes schema validation.
 
@@ -830,13 +820,38 @@ ${truncatedData}
 - Output the complete fixed JSON (not a diff)
 - Output ONLY the JSON — no explanation`;
 
-  const text = await callLlm(client, prompt, {
-    maxTokens: 16000,
-    thinkingBudget: 8000,
-  });
+  // Try generateObject with the appropriate schema, fall back to text extraction
+  try {
+    let fixed: unknown;
+    if (error.file === "schedule.json") {
+      const { object } = await generateObject({
+        model,
+        prompt,
+        schema: scheduleSchema,
+        maxRetries: 3,
+      });
+      fixed = object;
+    } else {
+      const { object } = await generateObject({
+        model,
+        prompt,
+        schema: separationSchema,
+        maxRetries: 3,
+      });
+      fixed = object;
+    }
 
-  const fixed = extractJson(text);
-  writeFileSync(filePath, JSON.stringify(fixed, null, 2) + "\n");
+    writeFileSync(filePath, JSON.stringify(fixed, null, 2) + "\n");
+  } catch {
+    const { text } = await generateText({
+      model,
+      prompt,
+      maxRetries: 3,
+    });
+
+    const fixed = extractJson(text);
+    writeFileSync(filePath, JSON.stringify(fixed, null, 2) + "\n");
+  }
 }
 
 function updateCitiesJson(
@@ -884,63 +899,191 @@ function updateCitiesJson(
   console.log(`  Output: ${outDir}/`);
 }
 
+// ─── Fixtures ────────────────────────────────────────────────────────────────
+
+function getFixturesDir(args: GenerateArgs, prefectureId: string, cityId: string): string {
+  return args.fixturesDir || join(ROOT, ".github/scripts/fixtures", prefectureId, cityId);
+}
+
+function saveDiscoverFixture(fixturesDir: string, sources: DiscoverResult): void {
+  mkdirSync(fixturesDir, { recursive: true });
+  writeFileSync(
+    join(fixturesDir, "discover-result.json"),
+    JSON.stringify(sources, null, 2) + "\n"
+  );
+  console.log(`  [fixtures] Saved discover-result.json to ${fixturesDir}`);
+}
+
+function saveDownloadFixtures(fixturesDir: string, tmpDir: string): void {
+  mkdirSync(fixturesDir, { recursive: true });
+  const files = readdirSync(tmpDir);
+  for (const file of files) {
+    copyFileSync(join(tmpDir, file), join(fixturesDir, file));
+  }
+  console.log(`  [fixtures] Saved ${files.length} downloaded file(s) to ${fixturesDir}`);
+}
+
+function loadDiscoverFixture(fixturesDir: string): DiscoverResult {
+  const filePath = join(fixturesDir, "discover-result.json");
+  if (!existsSync(filePath)) {
+    throw new Error(`Fixture not found: ${filePath}\nRun a full pipeline with --save-fixtures first.`);
+  }
+  const data = JSON.parse(readFileSync(filePath, "utf-8"));
+  return data as DiscoverResult;
+}
+
+function loadDownloadFixtures(fixturesDir: string, tmpDir: string): void {
+  mkdirSync(tmpDir, { recursive: true });
+  const files = readdirSync(fixturesDir).filter(
+    (f) => f !== "discover-result.json"
+  );
+  for (const file of files) {
+    copyFileSync(join(fixturesDir, file), join(tmpDir, file));
+  }
+  console.log(`  [fixtures] Loaded ${files.length} file(s) from ${fixturesDir} to ${tmpDir}`);
+}
+
 // ─── Main ───────────────────────────────────────────────────────────────────
 
 async function main() {
   const args = parseCliArgs();
+  const skipTo = args.skipTo;
+  const shouldRun = (step: Step) => {
+    if (!skipTo) return true;
+    return STEPS.indexOf(step) >= STEPS.indexOf(skipTo);
+  };
 
-  // Provider config via env vars — works with Anthropic, z.ai, or any compatible API
-  const client = new Anthropic();
+  console.log(
+    `\nGenerating garbage data for ${args.city} (${args.prefecture})`
+  );
+  console.log(`  Model: ${MODEL_ID}`);
+  console.log(`  API: ${LLM_BASE_URL}`);
+  if (skipTo) console.log(`  Skip to: ${skipTo}`);
+  if (args.saveFixtures) console.log(`  Save fixtures: enabled`);
+  console.log();
 
-  console.log(`\nGenerating garbage data for ${args.city} (${args.prefecture})`);
-  console.log(`  Model: ${MODEL}`);
-  console.log(`  API: ${process.env.ANTHROPIC_BASE_URL || "https://api.anthropic.com"}\n`);
+  let sources: DiscoverResult;
 
-  const sources = await discover(client, args);
-  await downloadAll(sources, TMP_DIR);
+  if (shouldRun("discover")) {
+    // Full discover step
+    sources = await retryStep("discover", () => discover(args));
+    if (args.saveFixtures) {
+      const fixturesDir = getFixturesDir(args, sources.prefectureId, sources.cityId);
+      saveDiscoverFixture(fixturesDir, sources);
+    }
+  } else {
+    // Load discover result from fixtures
+    // We need a temporary fixtures dir to find the discover result.
+    // If --fixtures-dir is given, use it. Otherwise, we need prefectureId/cityId
+    // which we don't have yet — so we infer from the city/prefecture names.
+    // The actual fixture dir will be resolved after we load the discover result.
+    const tempFixturesDir = args.fixturesDir || (() => {
+      // Try to find a matching fixture dir by scanning known fixtures
+      const fixturesRoot = join(ROOT, ".github/scripts/fixtures");
+      if (!existsSync(fixturesRoot)) {
+        throw new Error("No fixtures directory found. Run with --save-fixtures first, or provide --fixtures-dir.");
+      }
+      // Scan for fixture dirs that contain a discover-result.json
+      const prefectures = readdirSync(fixturesRoot);
+      for (const pref of prefectures) {
+        const prefPath = join(fixturesRoot, pref);
+        const cities = readdirSync(prefPath);
+        for (const city of cities) {
+          const discoverPath = join(prefPath, city, "discover-result.json");
+          if (existsSync(discoverPath)) {
+            const data = JSON.parse(readFileSync(discoverPath, "utf-8"));
+            // Match by checking if this fixture belongs to the requested city
+            if (data.cityId && data.prefectureId) {
+              return join(prefPath, city);
+            }
+          }
+        }
+      }
+      throw new Error("No matching fixtures found. Run with --save-fixtures first, or provide --fixtures-dir.");
+    })();
+
+    console.log(`  Loading fixtures from ${tempFixturesDir}`);
+    sources = loadDiscoverFixture(tempFixturesDir);
+    console.log(`  City ID: ${sources.prefectureId}/${sources.cityId}`);
+
+    if (!shouldRun("download")) {
+      // Also load downloaded files from fixtures into TMP_DIR
+      loadDownloadFixtures(tempFixturesDir, TMP_DIR);
+    }
+  }
+
+  if (shouldRun("download")) {
+    await downloadAll(sources, TMP_DIR);
+    if (args.saveFixtures) {
+      const fixturesDir = getFixturesDir(args, sources.prefectureId, sources.cityId);
+      saveDownloadFixtures(fixturesDir, TMP_DIR);
+    }
+  }
 
   const outDir = join(ROOT, "data/jp", sources.prefectureId, sources.cityId);
   mkdirSync(outDir, { recursive: true });
 
-  await generateSchedule(client, sources, args, TMP_DIR, outDir);
-  await generateSeparation(client, sources, args, TMP_DIR, outDir);
-
-  // Validate with auto-fix retry loop
-  console.log("Step 5: Validating generated data...");
-  for (let attempt = 0; attempt <= args.maxFixRetries; attempt++) {
-    const errors = validateData(outDir);
-
-    if (errors.length === 0) {
-      if (attempt > 0) {
-        console.log(`  Validation passed after ${attempt} auto-fix attempt(s).`);
-      } else {
-        console.log("  Validation passed.");
-      }
-      break;
-    }
-
-    if (attempt === args.maxFixRetries) {
-      for (const err of errors) {
-        console.error(`  FAIL ${err.file}:`);
-        for (const msg of err.errors) {
-          console.error(`    ${msg}`);
-        }
-      }
-      throw new Error(
-        `Validation failed after ${args.maxFixRetries} auto-fix attempt(s)`
-      );
-    }
-
-    console.log(
-      `  Validation errors found — auto-fix attempt ${attempt + 1}/${args.maxFixRetries}...`
+  if (shouldRun("schedule")) {
+    await retryStep("generateSchedule", () =>
+      generateSchedule(sources, args, TMP_DIR, outDir)
     );
-    for (const err of errors) {
-      console.log(`    Fixing ${err.file} (${err.errors.length} error(s))...`);
-      await autoFixFile(client, outDir, err);
-    }
+  } else {
+    console.log("Step 3: Skipped (schedule)");
   }
 
-  updateCitiesJson(sources, args, outDir);
+  if (shouldRun("separation")) {
+    await retryStep("generateSeparation", () =>
+      generateSeparation(sources, args, TMP_DIR, outDir)
+    );
+  } else {
+    console.log("Step 4: Skipped (separation)");
+  }
+
+  if (shouldRun("validate")) {
+    // Validate with auto-fix retry loop
+    console.log("Step 5: Validating generated data...");
+    for (let attempt = 0; attempt <= args.maxFixRetries; attempt++) {
+      const errors = validateData(outDir);
+
+      if (errors.length === 0) {
+        if (attempt > 0) {
+          console.log(
+            `  Validation passed after ${attempt} auto-fix attempt(s).`
+          );
+        } else {
+          console.log("  Validation passed.");
+        }
+        break;
+      }
+
+      if (attempt === args.maxFixRetries) {
+        for (const err of errors) {
+          console.error(`  FAIL ${err.file}:`);
+          for (const msg of err.errors) {
+            console.error(`    ${msg}`);
+          }
+        }
+        throw new Error(
+          `Validation failed after ${args.maxFixRetries} auto-fix attempt(s)`
+        );
+      }
+
+      console.log(
+        `  Validation errors found — auto-fix attempt ${attempt + 1}/${args.maxFixRetries}...`
+      );
+      for (const err of errors) {
+        console.log(
+          `    Fixing ${err.file} (${err.errors.length} error(s))...`
+        );
+        await autoFixFile(outDir, err);
+      }
+    }
+
+    updateCitiesJson(sources, args, outDir);
+  } else {
+    console.log("Step 5: Skipped (validate)");
+  }
+
   console.log("\nDone!");
 }
 
