@@ -1,0 +1,125 @@
+{
+  "city_id": "tokyo/shinagawa",
+  "categories": [
+    {
+      "category_id": "recyclable",
+      "name_ja": "資源"
+    },
+    {
+      "category_id": "oversized",
+      "name_ja": "粗大ごみ"
+    },
+    {
+      "category_id": "burnable",
+      "name_ja": "燃やすごみ"
+    },
+    {
+      "category_id": "category-d",
+      "name_ja": "アイロン｜陶器・ガラス・金属ごみ"
+    },
+    {
+      "category_id": "ceramics-glass-metal",
+      "name_ja": "陶器・ガラス・金属ごみ"
+    },
+    {
+      "category_id": "category-f",
+      "name_ja": "アイロン台（脚付）｜粗大ごみ"
+    },
+    {
+      "category_id": "category-g",
+      "name_ja": "穴あけ用パンチ｜陶器・ガラス・金属ごみ"
+    },
+    {
+      "category_id": "category-h",
+      "name_ja": "雨どい｜粗大ごみ"
+    },
+    {
+      "category_id": "category-i",
+      "name_ja": "編み機｜粗大ごみ"
+    },
+    {
+      "category_id": "category-j",
+      "name_ja": "アルバム（金属付）｜陶器・ガラス・金属ごみ"
+    },
+    {
+      "category_id": "category-k",
+      "name_ja": "アルミ箔｜陶器・ガラス・金属ごみ"
+    },
+    {
+      "category_id": "category-l",
+      "name_ja": "衣装箱ケース（金属製・プラスチック製）｜粗大ごみ"
+    },
+    {
+      "category_id": "category-m",
+      "name_ja": "一輪車｜粗大ごみ"
+    },
+    {
+      "category_id": "category-n",
+      "name_ja": "一斗缶｜陶器・ガラス・金属ごみ"
+    },
+    {
+      "category_id": "category-o",
+      "name_ja": "犬小屋・ケージ｜粗大ごみ"
+    },
+    {
+      "category_id": "category-p",
+      "name_ja": "衣類（革製品）｜燃やすごみ"
+    },
+    {
+      "category_id": "category-q",
+      "name_ja": "印鑑｜燃やすごみ"
+    },
+    {
+      "category_id": "category-r",
+      "name_ja": "飲料容器の上ブタ（アルミ製）｜陶器・ガラス・金属ごみ"
+    },
+    {
+      "category_id": "category-s",
+      "name_ja": "ウインドファン｜粗大ごみ"
+    },
+    {
+      "category_id": "category-t",
+      "name_ja": "腕時計（金属製）｜陶器・ガラス・金属ごみ"
+    },
+    {
+      "category_id": "category-u",
+      "name_ja": "腕時計（プラスチック製）｜燃やすごみ"
+    },
+    {
+      "category_id": "category-v",
+      "name_ja": "絵の具｜燃やすごみ"
+    },
+    {
+      "category_id": "category-w",
+      "name_ja": "絵の具のチューブ（金属製）｜陶器・ガラス・金属ごみ"
+    },
+    {
+      "category_id": "category-x",
+      "name_ja": "絵の具のチューブ（プラスチック製）｜燃やすごみ"
+    },
+    {
+      "category_id": "category-y",
+      "name_ja": "エレキギター｜粗大ごみ"
+    },
+    {
+      "category_id": "category-z",
+      "name_ja": "鉛筆｜燃やすごみ"
+    },
+    {
+      "category_id": "category-aa",
+      "name_ja": "オーブン（ガス・電気）｜粗大ごみ"
+    },
+    {
+      "category_id": "category-ab",
+      "name_ja": "お膳｜粗大ごみ"
+    },
+    {
+      "category_id": "category-ac",
+      "name_ja": "お玉（金属製）｜陶器・ガラス・金属ごみ"
+    },
+    {
+      "category_id": "category-ad",
+      "name_ja": "落ち葉｜燃やすごみ"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "city_id": "tokyo/shinagawa",
+  "categories": [
+    {
+      "category_id": "recyclable",
+      "name_ja": "資源"
+    },
+    {
+      "category_id": "burnable",
+      "name_ja": "燃やすごみ"
+    },
+    {
+      "category_id": "ceramics-glass-metal",
+      "name_ja": "陶器・ガラス・金属ごみ"
+    },
+    {
+      "category_id": "oversized",
+      "name_ja": "粗大ごみ"
+    },
+    {
+      "category_id": "category-e",
+      "name_ja": "品川区ごみ分別・リサイクル啓発動画 ~資源とごみを正しく出そう~"
+    }
+  ]
+}

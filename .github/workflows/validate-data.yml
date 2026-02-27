@@ -4,10 +4,22 @@ on:
   pull_request:
     paths:
       - "data/**"
+      - "tools/generator/**"
+      - ".github/scripts/**"
+      - ".github/workflows/**"
+      - "package.json"
+      - "bun.lock"
+      - "tsconfig.json"
   push:
     branches: [main]
     paths:
       - "data/**"
+      - "tools/generator/**"
+      - ".github/scripts/**"
+      - ".github/workflows/**"
+      - "package.json"
+      - "bun.lock"
+      - "tsconfig.json"
 
 jobs:
   validate:
@@ -20,6 +32,12 @@ jobs:
           bun-version: latest
 
       - run: bun install
+
+      - name: Type check tooling
+        run: bunx tsc --noEmit
+
+      - name: Test generator tooling
+        run: bun run test:generator
 
       - name: Validate all data files
         run: bun run validate

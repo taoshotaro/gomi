@@ -25,6 +25,12 @@ jobs:
     if: >
       (github.event_name == 'workflow_dispatch') ||
       (github.event_name == 'issues' && contains(github.event.label.name, 'ai-generate'))
+    concurrency:
+      group: >
+        generate-city-${{ github.event_name == 'workflow_dispatch' &&
+        format('{0}-{1}', inputs.prefecture, inputs.city) ||
+        format('issue-{0}', github.event.issue.number) }}
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -40,11 +46,11 @@ jobs:
         if: github.event_name == 'issues'
         id: parse
         run: |
-          echo '${{ github.event.issue.body }}' > /tmp/issue-body.txt
-          PARSED=$(bun run .github/scripts/parse-issue.ts /tmp/issue-body.txt)
-          echo "city=$(echo $PARSED | jq -r '.city')" >> $GITHUB_OUTPUT
-          echo "prefecture=$(echo $PARSED | jq -r '.prefecture')" >> $GITHUB_OUTPUT
-          echo "source_url=$(echo $PARSED | jq -r '.source_url // empty')" >> $GITHUB_OUTPUT
+          printf '%s' '${{ github.event.issue.body }}' > /tmp/issue-body.txt
+          PARSED=$(bun run tools/generator/cli/parse-issue.ts /tmp/issue-body.txt)
+          echo "city=$(jq -r '.city' <<< \"$PARSED\")" >> $GITHUB_OUTPUT
+          echo "prefecture=$(jq -r '.prefecture' <<< \"$PARSED\")" >> $GITHUB_OUTPUT
+          echo "source_url=$(jq -r '.source_url // empty' <<< \"$PARSED\")" >> $GITHUB_OUTPUT
 
       - name: Set inputs
         id: inputs
@@ -65,11 +71,94 @@ jobs:
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
           MODEL: ${{ vars.MODEL }}
         run: |
-          ARGS="--city '${{ steps.inputs.outputs.city }}' --prefecture '${{ steps.inputs.outputs.prefecture }}'"
           if [ -n "${{ steps.inputs.outputs.source_url }}" ]; then
-            ARGS="$ARGS --url '${{ steps.inputs.outputs.source_url }}'"
+            bun run tools/generator/cli/generate-city.ts \
+              --city "${{ steps.inputs.outputs.city }}" \
+              --prefecture "${{ steps.inputs.outputs.prefecture }}" \
+              --url "${{ steps.inputs.outputs.source_url }}" \
+              --mode fast \
+              --discover-max-steps 20 \
+              --discover-max-rounds 2 \
+              --discover-max-candidates 30 \
+              --discover-max-fetches 20 \
+              --discover-link-depth 1 \
+              --max-total-ms 180000 \
+              --max-step-ms 90000 \
+              --max-model-ms 45000 \
+              --selection-mode hybrid \
+              --selection-top-k 3 \
+              --selection-max-model-ms 12000 \
+              --selection-confidence-threshold 0.7 \
+              --selection-evidence-bytes 12000 \
+              --html-cleanup-timeout-ms 45000 \
+              --html-cleanup-required \
+              --html-cleanup-failure-policy skip-source \
+              --max-html-cleanup-calls 2 \
+              --drift-threshold 0.2 \
+              --model "${{ vars.MODEL || 'glm-4.7' }}" \
+              --base-url "${{ vars.ANTHROPIC_BASE_URL || vars.LLM_BASE_URL || 'https://api.z.ai/api/anthropic/v1' }}" \
+              --skills-mode hybrid \
+              --strict-skills-compat
+          else
+            bun run tools/generator/cli/generate-city.ts \
+              --city "${{ steps.inputs.outputs.city }}" \
+              --prefecture "${{ steps.inputs.outputs.prefecture }}" \
+              --mode fast \
+              --discover-max-steps 20 \
+              --discover-max-rounds 2 \
+              --discover-max-candidates 30 \
+              --discover-max-fetches 20 \
+              --discover-link-depth 1 \
+              --max-total-ms 180000 \
+              --max-step-ms 90000 \
+              --max-model-ms 45000 \
+              --selection-mode hybrid \
+              --selection-top-k 3 \
+              --selection-max-model-ms 12000 \
+              --selection-confidence-threshold 0.7 \
+              --selection-evidence-bytes 12000 \
+              --html-cleanup-timeout-ms 45000 \
+              --html-cleanup-required \
+              --html-cleanup-failure-policy skip-source \
+              --max-html-cleanup-calls 2 \
+              --drift-threshold 0.2 \
+              --model "${{ vars.MODEL || 'glm-4.7' }}" \
+              --base-url "${{ vars.ANTHROPIC_BASE_URL || vars.LLM_BASE_URL || 'https://api.z.ai/api/anthropic/v1' }}" \
+              --skills-mode hybrid \
+              --strict-skills-compat
           fi
-          eval "bun run .github/scripts/generate.ts $ARGS"
+
+      - name: Upload generator artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: generator-debug-${{ github.run_id }}
+          path: |
+            .tmp/generator-runs/**/events.jsonl
+            .tmp/generator-runs/**/events.log
+            .tmp/generator-runs/**/run-state.json
+            .tmp/generator-runs/**/discover-report.json
+            .tmp/generator-runs/**/discover-selected.json
+            .tmp/generator-runs/**/source-manifest.json
+            .tmp/generator-runs/**/extraction-plan.json
+            .tmp/generator-runs/**/execution-report.json
+            .tmp/generator-runs/**/cleanup-report.json
+            .tmp/generator-runs/**/selection-report.json
+            .tmp/generator-runs/**/conversion-plan.json
+            .tmp/generator-runs/**/conversion-report.json
+            /tmp/gomi-raw/**/events.jsonl
+            /tmp/gomi-raw/**/events.log
+            /tmp/gomi-raw/**/run-state.json
+            /tmp/gomi-raw/**/discover-report.json
+            /tmp/gomi-raw/**/discover-selected.json
+            /tmp/gomi-raw/**/source-manifest.json
+            /tmp/gomi-raw/**/extraction-plan.json
+            /tmp/gomi-raw/**/execution-report.json
+            /tmp/gomi-raw/**/cleanup-report.json
+            /tmp/gomi-raw/**/selection-report.json
+            /tmp/gomi-raw/**/conversion-plan.json
+            /tmp/gomi-raw/**/conversion-report.json
+          if-no-files-found: ignore
 
       - name: Validate generated data
         run: bun run validate

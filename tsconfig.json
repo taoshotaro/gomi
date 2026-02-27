@@ -5,11 +5,12 @@
     "moduleResolution": "bundler",
     "esModuleInterop": true,
     "strict": true,
+    "types": ["bun-types"],
     "resolveJsonModule": true,
     "outDir": "dist",
     "rootDir": ".",
     "skipLibCheck": true
   },
-  "include": [".github/scripts/**/*.ts"],
+  "include": [".github/scripts/**/*.ts", "tools/generator/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

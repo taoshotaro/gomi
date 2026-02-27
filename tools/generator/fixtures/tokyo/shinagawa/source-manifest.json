@@ -1,0 +1,47 @@
+[
+  {
+    "sourceId": "src-schedule-csv",
+    "url": "http://www.city.shinagawa.tokyo.jp/ct/other000081600/gomisyusyubi.csv",
+    "type": "csv",
+    "targetHints": ["schedule"],
+    "localPath": "schedule.csv",
+    "filename": "schedule.csv",
+    "status": "downloaded"
+  },
+  {
+    "sourceId": "src-schedule-html",
+    "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-shushu/hpg000032873.html",
+    "type": "html",
+    "targetHints": ["schedule"],
+    "localPath": "schedule.html",
+    "filename": "schedule.html",
+    "status": "downloaded"
+  },
+  {
+    "sourceId": "src-separation-html-1",
+    "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-bunbetsu/index.html",
+    "type": "html",
+    "targetHints": ["separation"],
+    "localPath": "separation.html",
+    "filename": "separation.html",
+    "status": "downloaded"
+  },
+  {
+    "sourceId": "src-separation-html-2",
+    "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-bunbetsu/hpg000032874.html",
+    "type": "html",
+    "targetHints": ["separation"],
+    "localPath": "separation-2.html",
+    "filename": "separation-2.html",
+    "status": "downloaded"
+  },
+  {
+    "sourceId": "src-separation-html-3",
+    "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-bunbetsu/hpg000032875.html",
+    "type": "html",
+    "targetHints": ["separation"],
+    "localPath": "separation-3.html",
+    "filename": "separation-3.html",
+    "status": "downloaded"
+  }
+]

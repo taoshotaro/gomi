@@ -1,0 +1,94 @@
+{
+  "version": "2.0.0",
+  "cityId": "shinagawa",
+  "prefectureId": "tokyo",
+  "officialUrl": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/",
+  "officialDomains": [
+    "www.city.shinagawa.tokyo.jp",
+    "city.shinagawa.tokyo.jp",
+    "lg.jp",
+    "go.jp",
+    "catalog.data.metro.tokyo.lg.jp",
+    "opendata.metro.tokyo.lg.jp"
+  ],
+  "candidates": [
+    {
+      "id": "src-schedule-csv",
+      "url": "http://www.city.shinagawa.tokyo.jp/ct/other000081600/gomisyusyubi.csv",
+      "type": "csv",
+      "targetHints": ["schedule"],
+      "host": "www.city.shinagawa.tokyo.jp",
+      "depth": 0,
+      "officialness": 1,
+      "directness": 1,
+      "relevance": 1,
+      "score": 0.98,
+      "reasons": ["fixture"],
+      "rejected": false
+    },
+    {
+      "id": "src-schedule-html",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-shushu/hpg000032873.html",
+      "type": "html",
+      "targetHints": ["schedule"],
+      "host": "www.city.shinagawa.tokyo.jp",
+      "depth": 0,
+      "officialness": 1,
+      "directness": 0.28,
+      "relevance": 0.9,
+      "score": 0.75,
+      "reasons": ["fixture"],
+      "rejected": false
+    },
+    {
+      "id": "src-separation-html-1",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-bunbetsu/index.html",
+      "type": "html",
+      "targetHints": ["separation"],
+      "host": "www.city.shinagawa.tokyo.jp",
+      "depth": 0,
+      "officialness": 1,
+      "directness": 0.28,
+      "relevance": 0.9,
+      "score": 0.78,
+      "reasons": ["fixture"],
+      "rejected": false
+    },
+    {
+      "id": "src-separation-html-2",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-bunbetsu/hpg000032874.html",
+      "type": "html",
+      "targetHints": ["separation"],
+      "host": "www.city.shinagawa.tokyo.jp",
+      "depth": 0,
+      "officialness": 1,
+      "directness": 0.28,
+      "relevance": 0.85,
+      "score": 0.74,
+      "reasons": ["fixture"],
+      "rejected": false
+    },
+    {
+      "id": "src-separation-html-3",
+      "url": "https://www.city.shinagawa.tokyo.jp/PC/kankyo/kankyo-gomi/kankyo-gomi-bunbetsu/hpg000032875.html",
+      "type": "html",
+      "targetHints": ["separation"],
+      "host": "www.city.shinagawa.tokyo.jp",
+      "depth": 0,
+      "officialness": 1,
+      "directness": 0.28,
+      "relevance": 0.84,
+      "score": 0.73,
+      "reasons": ["fixture"],
+      "rejected": false
+    }
+  ],
+  "selected": {
+    "schedule": ["src-schedule-csv", "src-schedule-html"],
+    "separation": [
+      "src-separation-html-1",
+      "src-separation-html-2",
+      "src-separation-html-3"
+    ]
+  }
+}

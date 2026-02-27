@@ -1,0 +1,33 @@
+{
+  "city_id": "tokyo/shinagawa",
+  "categories": [
+    {
+      "category_id": "recyclable",
+      "name_ja": "資源"
+    },
+    {
+      "category_id": "burnable",
+      "name_ja": "燃やすごみ"
+    },
+    {
+      "category_id": "ceramics-glass-metal",
+      "name_ja": "陶器・ガラス・金属ごみ"
+    },
+    {
+      "category_id": "oversized",
+      "name_ja": "粗大ごみ"
+    },
+    {
+      "category_id": "category-e",
+      "name_ja": "ら行で始まる資源・ごみ、わ行で始まる資源・ごみ"
+    },
+    {
+      "category_id": "category-f",
+      "name_ja": "## あ行で始まる資源・ごみ"
+    },
+    {
+      "category_id": "category-g",
+      "name_ja": "もしくは燃やすごみ"
+    }
+  ]
+}

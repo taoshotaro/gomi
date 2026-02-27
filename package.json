@@ -4,17 +4,19 @@
   "description": "Japanese garbage collection schedules and separation rules (ごみ収集日・分別ルール)",
   "type": "module",
   "scripts": {
-    "validate": "bun run .github/scripts/validate.ts",
-    "generate": "bun run .github/scripts/generate.ts",
-    "parse-issue": "bun run .github/scripts/parse-issue.ts"
+    "validate": "bun run tools/generator/cli/validate-data.ts",
+    "generate": "bun run tools/generator/cli/generate-city.ts",
+    "parse-issue": "bun run tools/generator/cli/parse-issue.ts",
+    "test:generator": "bun test tools/generator/tests"
   },
   "keywords": ["japan", "garbage", "gomi", "recycling", "ゴミ", "分別"],
   "license": "MIT",
   "devDependencies": {
-    "@ai-sdk/openai-compatible": "^0.2.0",
+    "@ai-sdk/anthropic": "^1.2.12",
     "ai": "^4.3.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
+    "bun-types": "^1.3.0",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0",
     "zod": "^3.24.0"
